@@ -1,0 +1,255 @@
+{
+  "nav": {
+    "ecosystem": "Ökosystem",
+    "training": "Training",
+    "nutrition": "Ernährung",
+    "improvement": "Improvement",
+    "comparison": "Vergleich",
+    "vision": "Vision",
+    "cta": "Jetzt testen"
+  },
+  "hero": {
+    "badge": "Jetzt in der Beta",
+    "headline": "Dein Leben.\nDein Training.\nDeine Daten.",
+    "subline": "MyLife verbindet Training, Ernährung und persönliche Weiterentwicklung in einem einzigen, intelligenten Ökosystem – für alle, die mehr aus sich herausholen wollen.",
+    "cta": "Training jetzt testen",
+    "ctaUrl": "https://mylife-training.vercel.app",
+    "ctaSecondary": "Mehr erfahren",
+    "stat1Value": "3",
+    "stat1Label": "Integrierte Apps",
+    "stat2Value": "100%",
+    "stat2Label": "Datenhoheit",
+    "stat3Value": "Beta",
+    "stat3Label": "Jetzt verfügbar"
+  },
+  "ecosystem": {
+    "badge": "Das Ökosystem",
+    "title": "Drei Apps. Eine Vision.",
+    "subtitle": "MyLife ist mehr als eine Fitness-App – es ist ein ganzheitliches System, das alle Bereiche deiner Gesundheit und Entwicklung miteinander verknüpft.",
+    "apps": [
+      {
+        "name": "MyLife Training",
+        "status": "Beta",
+        "statusType": "beta",
+        "icon": "🏋️",
+        "description": "Protokolliere Workouts, erstelle individuelle Trainingspläne und verfolge deinen Fortschritt mit aussagekräftigen Analysen.",
+        "cta": "Jetzt testen",
+        "ctaUrl": "https://mylife-training.vercel.app"
+      },
+      {
+        "name": "MyLife Nutrition",
+        "status": "In Vorbereitung",
+        "statusType": "soon",
+        "icon": "🥗",
+        "description": "Tracke Kalorien und Makros, verknüpfe Ernährungsdaten direkt mit deinem Training und erhalte personalisierte Empfehlungen.",
+        "cta": "Benachrichtigen lassen",
+        "ctaUrl": "#newsletter"
+      },
+      {
+        "name": "MyLife Improvement",
+        "status": "In Vorbereitung",
+        "statusType": "soon",
+        "icon": "🧠",
+        "description": "Die KI-gestützte Intelligenzebene, die Trainingsdaten, Ernährung, Wearables und mentale Gesundheit zu ganzheitlichen Insights kombiniert.",
+        "cta": "Benachrichtigen lassen",
+        "ctaUrl": "#newsletter"
+      }
+    ]
+  },
+  "training": {
+    "badge": "Beta – Jetzt verfügbar",
+    "title": "MyLife Training",
+    "subtitle": "Vollständig funktionsfähig und aktiv in Entwicklung. Starte noch heute mit strukturiertem Training.",
+    "features": [
+      {
+        "icon": "📝",
+        "title": "Workout-Protokollierung",
+        "description": "Erfasse Übungen, Sätze, Wiederholungen und Gewichte präzise und übersichtlich."
+      },
+      {
+        "icon": "📋",
+        "title": "Trainingsplan-Erstellung",
+        "description": "Erstelle und verwalte individuelle Trainingspläne, die genau auf deine Ziele zugeschnitten sind."
+      },
+      {
+        "icon": "📊",
+        "title": "Fortschrittsanalyse",
+        "description": "Visualisiere deine Leistungsentwicklung über Zeit und erkenne Trends in deinem Training."
+      },
+      {
+        "icon": "🔄",
+        "title": "Flexible Workout-Strukturen",
+        "description": "Unterstützt verschiedene Trainingsarten – von Krafttraining bis Bodyweight-Übungen."
+      },
+      {
+        "icon": "⚡",
+        "title": "Schnelle Erfassung",
+        "description": "Minimaler Aufwand beim Eintragen – damit du dich auf das Training konzentrieren kannst."
+      }
+    ],
+    "cta": "Training jetzt testen",
+    "ctaUrl": "https://mylife-training.vercel.app",
+    "learnMore": "Mehr erfahren",
+    "learnLess": "Weniger anzeigen"
+  },
+  "nutrition": {
+    "badge": "In Vorbereitung",
+    "title": "MyLife Nutrition",
+    "subtitle": "Ernährung und Training gehören zusammen. MyLife Nutrition wird die Lücke schließen.",
+    "description": "Die meisten Fitness-Apps behandeln Training und Ernährung getrennt. MyLife Nutrition wird beides nahtlos verbinden – damit du verstehst, wie deine Ernährung dein Training beeinflusst und umgekehrt.",
+    "features": [
+      {
+        "icon": "🔢",
+        "title": "Kalorien- & Makro-Tracking",
+        "description": "Präzises Erfassen von Kalorien, Proteinen, Kohlenhydraten und Fetten."
+      },
+      {
+        "icon": "🔗",
+        "title": "Training-Ernährung-Integration",
+        "description": "Verknüpfung von Ernährungsdaten direkt mit deinen Trainingsdaten für ganzheitliche Insights."
+      },
+      {
+        "icon": "🍽️",
+        "title": "Personalisierte Mahlzeiten-Empfehlungen",
+        "description": "KI-basierte Vorschläge für optimale Mahlzeiten rund ums Training."
+      },
+      {
+        "icon": "💧",
+        "title": "Hydrations-Tracking",
+        "description": "Behalte deine Flüssigkeitszufuhr im Blick – gerade nach intensiven Einheiten essenziell."
+      },
+      {
+        "icon": "📈",
+        "title": "Ernährungs-Analysen",
+        "description": "Verstehe deine Ernährungsgewohnheiten durch übersichtliche Dashboards und Trends."
+      }
+    ],
+    "notifyLabel": "Benachrichtige mich, wenn Nutrition verfügbar ist",
+    "notifyPlaceholder": "deine@email.de",
+    "notifyButton": "Benachrichtigen"
+  },
+  "improvement": {
+    "badge": "Vision – In Vorbereitung",
+    "title": "MyLife Improvement",
+    "subtitle": "Die Intelligenzebene, die alles zusammenführt.",
+    "description": "MyLife Improvement ist die dritte Säule des Ökosystems – eine KI-gestützte Plattform, die Daten aus Training, Ernährung, Wearables und mentaler Gesundheit zu einem vollständigen Bild deiner Leistungsfähigkeit kombiniert.",
+    "pillars": [
+      {
+        "icon": "🏋️",
+        "label": "Training"
+      },
+      {
+        "icon": "🥗",
+        "label": "Ernährung"
+      },
+      {
+        "icon": "⌚",
+        "label": "Wearables"
+      },
+      {
+        "icon": "🧠",
+        "label": "Mental Health"
+      }
+    ],
+    "combinesTo": "Ganzheitliche Insights & Empfehlungen",
+    "benefits": [
+      "Personalisierte Scorecard deiner Gesundheit & Leistung",
+      "KI-Empfehlungen basierend auf allen deinen Daten",
+      "Erkennung von Mustern über Training, Schlaf und Ernährung",
+      "Priorisierte Handlungsempfehlungen für maximale Wirkung"
+    ]
+  },
+  "comparison": {
+    "badge": "Wettbewerbsanalyse",
+    "title": "MyLife im Vergleich",
+    "subtitle": "Warum MyLife anders ist als bestehende Lösungen.",
+    "mylife": "MyLife",
+    "planned": "Geplant",
+    "competitors": ["MyFitnessPal", "Strava", "Fitbit"],
+    "competitorDescriptions": [
+      "Starke Lebensmitteldatenbank & KI-Ernährungsempfehlungen, aber kein integriertes Trainings-System.",
+      "Exzellentes GPS-Tracking & Community für Ausdauersportler, aber keine Ernährungsintegration.",
+      "Wearable-Integration & Schlaf-Tracking, aber weniger Fokus auf strukturierte Trainingsplanung."
+    ],
+    "features": [
+      { "name": "Workout-Protokollierung", "mylife": "yes", "mfp": "partial", "strava": "partial", "fitbit": "partial" },
+      { "name": "Trainingsplan-Erstellung", "mylife": "yes", "mfp": "no", "strava": "no", "fitbit": "no" },
+      { "name": "Fortschrittsanalyse", "mylife": "yes", "mfp": "partial", "strava": "yes", "fitbit": "partial" },
+      { "name": "Kalorien- & Makro-Tracking", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "yes" },
+      { "name": "Lebensmittel-Datenbank", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "yes" },
+      { "name": "GPS-Tracking", "mylife": "no", "mfp": "no", "strava": "yes", "fitbit": "yes" },
+      { "name": "Wearable-Integration", "mylife": "planned", "mfp": "partial", "strava": "yes", "fitbit": "yes" },
+      { "name": "Mental Health Tools", "mylife": "planned", "mfp": "no", "strava": "no", "fitbit": "partial" },
+      { "name": "KI-Coaching", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "partial" },
+      { "name": "Ganzheitliches Ökosystem", "mylife": "yes", "mfp": "no", "strava": "no", "fitbit": "no" }
+    ]
+  },
+  "roadmap": {
+    "badge": "Vision & Roadmap",
+    "title": "Die Zukunft von MyLife",
+    "subtitle": "Diese Features sind in Planung und noch nicht im aktuellen Beta verfügbar.",
+    "plannedBadge": "In Planung",
+    "items": [
+      {
+        "icon": "🤖",
+        "title": "KI-gesteuerte Workouts & Coaching",
+        "description": "Adaptive Trainingsempfehlungen, die sich automatisch an deine Leistung und Ziele anpassen."
+      },
+      {
+        "icon": "📸",
+        "title": "Realtime-Formanalyse",
+        "description": "Kamera-gestütztes Feedback zu deiner Übungsausführung in Echtzeit."
+      },
+      {
+        "icon": "🛌",
+        "title": "Intelligente Erholungsplanung",
+        "description": "KI-Empfehlungen für Ruhetage oder leichtere Einheiten basierend auf Trainingsintensität und Schlaf."
+      },
+      {
+        "icon": "🥦",
+        "title": "Personalisierte Ernährung",
+        "description": "Automatische Kalorienanpassung, Post-Workout-Mahlzeit-Vorschläge und Hydrations-Erinnerungen."
+      },
+      {
+        "icon": "🏆",
+        "title": "Community & Gamification",
+        "description": "Gruppen-Challenges, Achievement-Sharing, Leaderboards und Belohnungssysteme."
+      },
+      {
+        "icon": "🧘",
+        "title": "Mentale Gesundheit",
+        "description": "Geführte Meditation, Atemübungen, Stresserkennung und Stimmungs-Journaling."
+      },
+      {
+        "icon": "⌚",
+        "title": "Wearable-Integration",
+        "description": "Automatische Synchronisierung von Herzfrequenz, Schlaf- und Stressdaten von Apple Watch, Fitbit, Garmin und mehr."
+      },
+      {
+        "icon": "📴",
+        "title": "Offline & Flexible Workouts",
+        "description": "Herunterladbare Workouts für unterwegs und Unterstützung verschiedener Session-Längen."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Jetzt loslegen",
+    "title": "Bereit, dein Leben zu transformieren?",
+    "subtitle": "Starte noch heute mit MyLife Training – kostenlos, ohne Kreditkarte.",
+    "primaryButton": "Training jetzt testen",
+    "primaryUrl": "https://mylife-training.vercel.app",
+    "newsletterTitle": "Bleib auf dem Laufenden",
+    "newsletterSubtitle": "Erfahre als Erster, wenn Nutrition und Improvement verfügbar sind.",
+    "placeholder": "deine@email.de",
+    "button": "Benachrichtigen"
+  },
+  "footer": {
+    "tagline": "Dein Ökosystem für Training, Ernährung und Weiterentwicklung.",
+    "links": [
+      { "label": "Training", "href": "https://mylife-training.vercel.app" },
+      { "label": "Datenschutz", "href": "#" },
+      { "label": "Impressum", "href": "#" }
+    ],
+    "copyright": "© 2024 MyLife. Alle Rechte vorbehalten."
+  }
+}
