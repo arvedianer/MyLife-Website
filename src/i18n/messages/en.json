@@ -1,0 +1,255 @@
+{
+  "nav": {
+    "ecosystem": "Ecosystem",
+    "training": "Training",
+    "nutrition": "Nutrition",
+    "improvement": "Improvement",
+    "comparison": "Comparison",
+    "vision": "Vision",
+    "cta": "Try now"
+  },
+  "hero": {
+    "badge": "Now in Beta",
+    "headline": "Your Life.\nYour Training.\nYour Data.",
+    "subline": "MyLife connects training, nutrition, and personal development in one intelligent ecosystem — for everyone who wants to get more out of themselves.",
+    "cta": "Try Training now",
+    "ctaUrl": "https://mylife-training.vercel.app",
+    "ctaSecondary": "Learn more",
+    "stat1Value": "3",
+    "stat1Label": "Integrated Apps",
+    "stat2Value": "100%",
+    "stat2Label": "Data Ownership",
+    "stat3Value": "Beta",
+    "stat3Label": "Available now"
+  },
+  "ecosystem": {
+    "badge": "The Ecosystem",
+    "title": "Three Apps. One Vision.",
+    "subtitle": "MyLife is more than a fitness app — it's a holistic system that connects all areas of your health and development.",
+    "apps": [
+      {
+        "name": "MyLife Training",
+        "status": "Beta",
+        "statusType": "beta",
+        "icon": "🏋️",
+        "description": "Log workouts, create individual training plans and track your progress with meaningful analytics.",
+        "cta": "Try now",
+        "ctaUrl": "https://mylife-training.vercel.app"
+      },
+      {
+        "name": "MyLife Nutrition",
+        "status": "Coming Soon",
+        "statusType": "soon",
+        "icon": "🥗",
+        "description": "Track calories and macros, connect nutrition data directly with your training and get personalized recommendations.",
+        "cta": "Notify me",
+        "ctaUrl": "#newsletter"
+      },
+      {
+        "name": "MyLife Improvement",
+        "status": "Coming Soon",
+        "statusType": "soon",
+        "icon": "🧠",
+        "description": "The AI-powered intelligence layer that combines training data, nutrition, wearables and mental health into holistic insights.",
+        "cta": "Notify me",
+        "ctaUrl": "#newsletter"
+      }
+    ]
+  },
+  "training": {
+    "badge": "Beta – Available now",
+    "title": "MyLife Training",
+    "subtitle": "Fully functional and actively in development. Start structured training today.",
+    "features": [
+      {
+        "icon": "📝",
+        "title": "Workout Logging",
+        "description": "Record exercises, sets, reps and weights precisely and clearly."
+      },
+      {
+        "icon": "📋",
+        "title": "Training Plan Creation",
+        "description": "Create and manage individual training plans tailored exactly to your goals."
+      },
+      {
+        "icon": "📊",
+        "title": "Progress Analytics",
+        "description": "Visualize your performance development over time and identify trends in your training."
+      },
+      {
+        "icon": "🔄",
+        "title": "Flexible Workout Structures",
+        "description": "Supports various training types — from strength training to bodyweight exercises."
+      },
+      {
+        "icon": "⚡",
+        "title": "Quick Entry",
+        "description": "Minimal effort when logging — so you can focus on training."
+      }
+    ],
+    "cta": "Try Training now",
+    "ctaUrl": "https://mylife-training.vercel.app",
+    "learnMore": "Learn more",
+    "learnLess": "Show less"
+  },
+  "nutrition": {
+    "badge": "Coming Soon",
+    "title": "MyLife Nutrition",
+    "subtitle": "Nutrition and training belong together. MyLife Nutrition will close the gap.",
+    "description": "Most fitness apps treat training and nutrition separately. MyLife Nutrition will connect both seamlessly — so you understand how your nutrition affects your training and vice versa.",
+    "features": [
+      {
+        "icon": "🔢",
+        "title": "Calorie & Macro Tracking",
+        "description": "Precise logging of calories, proteins, carbohydrates and fats."
+      },
+      {
+        "icon": "🔗",
+        "title": "Training-Nutrition Integration",
+        "description": "Connect nutrition data directly with your training data for holistic insights."
+      },
+      {
+        "icon": "🍽️",
+        "title": "Personalized Meal Recommendations",
+        "description": "AI-based suggestions for optimal meals around training."
+      },
+      {
+        "icon": "💧",
+        "title": "Hydration Tracking",
+        "description": "Keep track of your fluid intake — especially essential after intense sessions."
+      },
+      {
+        "icon": "📈",
+        "title": "Nutrition Analytics",
+        "description": "Understand your eating habits through clear dashboards and trends."
+      }
+    ],
+    "notifyLabel": "Notify me when Nutrition is available",
+    "notifyPlaceholder": "your@email.com",
+    "notifyButton": "Notify me"
+  },
+  "improvement": {
+    "badge": "Vision – Coming Soon",
+    "title": "MyLife Improvement",
+    "subtitle": "The intelligence layer that brings everything together.",
+    "description": "MyLife Improvement is the third pillar of the ecosystem — an AI-powered platform that combines data from training, nutrition, wearables and mental health into a complete picture of your performance.",
+    "pillars": [
+      {
+        "icon": "🏋️",
+        "label": "Training"
+      },
+      {
+        "icon": "🥗",
+        "label": "Nutrition"
+      },
+      {
+        "icon": "⌚",
+        "label": "Wearables"
+      },
+      {
+        "icon": "🧠",
+        "label": "Mental Health"
+      }
+    ],
+    "combinesTo": "Holistic Insights & Recommendations",
+    "benefits": [
+      "Personalized scorecard of your health & performance",
+      "AI recommendations based on all your data",
+      "Pattern recognition across training, sleep and nutrition",
+      "Prioritized action recommendations for maximum impact"
+    ]
+  },
+  "comparison": {
+    "badge": "Competitive Analysis",
+    "title": "MyLife vs. the Competition",
+    "subtitle": "Why MyLife is different from existing solutions.",
+    "mylife": "MyLife",
+    "planned": "Planned",
+    "competitors": ["MyFitnessPal", "Strava", "Fitbit"],
+    "competitorDescriptions": [
+      "Strong food database & AI nutrition recommendations, but no integrated training system.",
+      "Excellent GPS tracking & community for endurance athletes, but no nutrition integration.",
+      "Wearable integration & sleep tracking, but less focus on structured training planning."
+    ],
+    "features": [
+      { "name": "Workout Logging", "mylife": "yes", "mfp": "partial", "strava": "partial", "fitbit": "partial" },
+      { "name": "Training Plan Creation", "mylife": "yes", "mfp": "no", "strava": "no", "fitbit": "no" },
+      { "name": "Progress Analytics", "mylife": "yes", "mfp": "partial", "strava": "yes", "fitbit": "partial" },
+      { "name": "Calorie & Macro Tracking", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "yes" },
+      { "name": "Food Database", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "yes" },
+      { "name": "GPS Tracking", "mylife": "no", "mfp": "no", "strava": "yes", "fitbit": "yes" },
+      { "name": "Wearable Integration", "mylife": "planned", "mfp": "partial", "strava": "yes", "fitbit": "yes" },
+      { "name": "Mental Health Tools", "mylife": "planned", "mfp": "no", "strava": "no", "fitbit": "partial" },
+      { "name": "AI Coaching", "mylife": "planned", "mfp": "yes", "strava": "no", "fitbit": "partial" },
+      { "name": "Holistic Ecosystem", "mylife": "yes", "mfp": "no", "strava": "no", "fitbit": "no" }
+    ]
+  },
+  "roadmap": {
+    "badge": "Vision & Roadmap",
+    "title": "The Future of MyLife",
+    "subtitle": "These features are planned and not yet available in the current Beta.",
+    "plannedBadge": "Planned",
+    "items": [
+      {
+        "icon": "🤖",
+        "title": "AI-Powered Workouts & Coaching",
+        "description": "Adaptive training recommendations that automatically adjust based on your performance and goals."
+      },
+      {
+        "icon": "📸",
+        "title": "Real-Time Form Analysis",
+        "description": "Camera-based feedback on your exercise form in real time."
+      },
+      {
+        "icon": "🛌",
+        "title": "Intelligent Recovery Planning",
+        "description": "AI suggestions for rest days or lighter sessions based on training intensity and sleep."
+      },
+      {
+        "icon": "🥦",
+        "title": "Personalized Nutrition",
+        "description": "Automatic calorie adjustments, post-workout meal suggestions and hydration reminders."
+      },
+      {
+        "icon": "🏆",
+        "title": "Community & Gamification",
+        "description": "Group challenges, achievement sharing, leaderboards and reward systems."
+      },
+      {
+        "icon": "🧘",
+        "title": "Mental Health",
+        "description": "Guided meditation, breathing exercises, stress detection and mood journaling."
+      },
+      {
+        "icon": "⌚",
+        "title": "Wearable Integration",
+        "description": "Automatic syncing of heart rate, sleep and stress data from Apple Watch, Fitbit, Garmin and more."
+      },
+      {
+        "icon": "📴",
+        "title": "Offline & Flexible Workouts",
+        "description": "Downloadable workouts for on the go and support for various session lengths."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Get started",
+    "title": "Ready to transform your life?",
+    "subtitle": "Start today with MyLife Training — free, no credit card required.",
+    "primaryButton": "Try Training now",
+    "primaryUrl": "https://mylife-training.vercel.app",
+    "newsletterTitle": "Stay in the loop",
+    "newsletterSubtitle": "Be the first to know when Nutrition and Improvement become available.",
+    "placeholder": "your@email.com",
+    "button": "Notify me"
+  },
+  "footer": {
+    "tagline": "Your ecosystem for training, nutrition and personal development.",
+    "links": [
+      { "label": "Training", "href": "https://mylife-training.vercel.app" },
+      { "label": "Privacy", "href": "#" },
+      { "label": "Imprint", "href": "#" }
+    ],
+    "copyright": "© 2024 MyLife. All rights reserved."
+  }
+}
