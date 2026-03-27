@@ -11,68 +11,91 @@ export default function ImprovementSection() {
   const benefits = [0, 1, 2, 3].map((i) => t(`benefits.${i}`));
 
   return (
-    <section id="improvement" className="py-24 px-4 bg-gray-900/40">
+    <section id="improvement" className="py-32 px-4 relative">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/8 to-transparent pointer-events-none" />
+
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-semibold mb-4">
-            {t("badge")}
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <p className="section-number mb-4">{t("badge")}</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5">
             {t("title")}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Data flow diagram */}
-          <div className="relative">
-            <div className="glass rounded-2xl p-8">
-              {/* Pillars */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {pillars.map((pillar, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/5"
-                  >
-                    <span className="text-2xl">{pillar.icon}</span>
-                    <span className="text-sm font-medium text-gray-300">{pillar.label}</span>
-                  </div>
-                ))}
-              </div>
+        <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+          {/* Left: Hub visualization */}
+          <div className="relative flex items-center justify-center min-h-[380px]">
+            {/* Outer glow ring */}
+            <div className="absolute w-72 h-72 rounded-full border border-indigo-500/10 animate-spin-slow" />
+            <div className="absolute w-52 h-52 rounded-full border border-violet-500/15" />
 
-              {/* Arrow */}
-              <div className="flex items-center justify-center mb-8">
-                <div className="flex flex-col items-center gap-1">
-                  <div className="w-px h-6 bg-gradient-to-b from-indigo-500 to-violet-500" />
-                  <svg className="w-5 h-5 text-violet-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 3a1 1 0 01.707.293l7 7a1 1 0 01-1.414 1.414L10 5.414 3.707 11.707a1 1 0 01-1.414-1.414l7-7A1 1 0 0110 3z" clipRule="evenodd" transform="rotate(180 10 10)" />
-                  </svg>
-                  <div className="w-px h-6 bg-gradient-to-b from-violet-500 to-purple-500" />
-                </div>
-              </div>
-
-              {/* Output */}
-              <div className="p-5 rounded-xl bg-gradient-to-r from-indigo-600/20 to-violet-600/20 border border-indigo-500/20 text-center">
-                <span className="text-2xl mb-2 block">✨</span>
-                <span className="font-semibold text-white">{t("combinesTo")}</span>
-              </div>
+            {/* Center node */}
+            <div className="absolute z-20 w-24 h-24 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 flex flex-col items-center justify-center shadow-2xl shadow-indigo-500/30 border border-indigo-400/30">
+              <span className="text-2xl">✨</span>
+              <span className="text-[9px] text-indigo-200 font-bold mt-0.5 text-center leading-tight px-2">
+                {t("combinesTo").split(" ")[0]}
+              </span>
             </div>
+
+            {/* Pillar nodes */}
+            {pillars.map((p, i) => {
+              const angles = [-90, 0, 90, 180];
+              const angle = ((angles[i] ?? 0) * Math.PI) / 180;
+              const r = 130;
+              const x = r * Math.cos(angle);
+              const y = r * Math.sin(angle);
+
+              return (
+                <div
+                  key={i}
+                  className="absolute z-10"
+                  style={{ transform: `translate(${x}px, ${y}px)` }}
+                >
+                  {/* Connector line */}
+                  <div
+                    className="absolute top-1/2 left-1/2 bg-gradient-to-r from-indigo-500/30 to-transparent h-px"
+                    style={{
+                      width: `${r - 48}px`,
+                      transform: `rotate(${angles[i] + 180}deg)`,
+                      transformOrigin: "left center",
+                    }}
+                  />
+                  {/* Node */}
+                  <div className="relative w-14 h-14 rounded-2xl bg-[#0f172a] border border-white/10 flex flex-col items-center justify-center gap-0.5 -translate-x-1/2 -translate-y-1/2 shadow-lg">
+                    <span className="text-lg">{p.icon}</span>
+                    <span className="text-[9px] text-slate-400 font-medium">{p.label}</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          {/* Benefits */}
+          {/* Right: Benefits */}
           <div>
-            <p className="text-gray-400 mb-8 leading-relaxed">{t("description")}</p>
+            <p className="text-slate-400 mb-10 leading-relaxed">{t("description")}</p>
+
             <ul className="space-y-4">
               {benefits.map((benefit, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mt-0.5">
-                    <svg className="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li
+                  key={i}
+                  className="flex items-start gap-4 p-4 rounded-2xl card-gradient-border bg-[#0f172a] transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center mt-0.5">
+                    <svg
+                      className="w-3.5 h-3.5 text-indigo-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-300 leading-relaxed">{benefit}</span>
+                  <span className="text-sm text-slate-300 leading-relaxed">{benefit}</span>
                 </li>
               ))}
             </ul>

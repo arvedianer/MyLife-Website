@@ -10,42 +10,52 @@ export default function VisionRoadmap() {
   }));
 
   return (
-    <section id="vision" className="py-24 px-4 bg-gray-900/40">
+    <section id="vision" className="py-32 px-4 relative">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/8 to-transparent pointer-events-none" />
+
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-4">
-            {t("badge")}
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-20">
+          <p className="section-number mb-4">{t("badge")}</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5">
             {t("title")}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
 
-        {/* Roadmap grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((item, i) => (
             <div
               key={i}
-              className="relative glass rounded-xl p-6 group hover:border-purple-500/20 transition-all duration-300"
+              className="relative group rounded-2xl p-6 card-gradient-border bg-[#0a0e1a] transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Glow on hover */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-600/0 to-indigo-600/0 group-hover:from-purple-600/5 group-hover:to-indigo-600/5 transition-all duration-300" />
+              {/* Hover glow */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/0 to-indigo-600/0 group-hover:from-violet-600/6 group-hover:to-indigo-600/4 transition-all duration-300" />
 
               <div className="relative z-10">
-                <div className="text-3xl mb-3">{item.icon}</div>
+                {/* Number + icon row */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/8 flex items-center justify-center text-xl">
+                    {item.icon}
+                  </div>
+                  <span className="text-[10px] font-black text-white/15 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
 
-                <span className="inline-block px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-3">
+                {/* Badge */}
+                <span className="inline-block px-2 py-0.5 rounded-full bg-amber-500/8 border border-amber-500/15 text-[10px] text-amber-400 font-bold mb-3">
                   {t("plannedBadge")}
                 </span>
 
-                <h3 className="font-semibold text-white mb-2 leading-tight">
+                <h3 className="font-bold text-white text-sm mb-2 leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-[12px] text-slate-500 leading-relaxed">
                   {item.description}
                 </p>
               </div>
