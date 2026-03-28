@@ -111,7 +111,7 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.35 }}
-        transition={{ delay: 1.2, duration: 1 }}
+        transition={{ delay: 1.2, duration: 1, ease }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
       >
         <div
