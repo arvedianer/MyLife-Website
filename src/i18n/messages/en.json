@@ -126,7 +126,8 @@
     ],
     "notifyLabel": "Notify me when Nutrition is available",
     "notifyPlaceholder": "your@email.com",
-    "notifyButton": "Notify me"
+    "notifyButton": "Notify me",
+    "notifySuccess": "You're in — we'll notify you!"
   },
   "improvement": {
     "badge": "Vision – Coming Soon",
@@ -241,7 +242,9 @@
     "newsletterTitle": "Stay in the loop",
     "newsletterSubtitle": "Be the first to know when Nutrition and Improvement become available.",
     "placeholder": "your@email.com",
-    "button": "Notify me"
+    "button": "Notify me",
+    "successMessage": "You're in — we'll be in touch!",
+    "features": ["Free", "No credit card", "Start instantly"]
   },
   "footer": {
     "tagline": "Your ecosystem for training, nutrition and personal development.",

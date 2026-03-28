@@ -147,7 +147,7 @@ export default function NutritionSection() {
                 {submitted ? (
                   <div className="flex items-center gap-2 text-green-400 text-sm">
                     <Icons.Check className="w-4 h-4" />
-                    Eingetragen — du wirst benachrichtigt!
+                    {t("notifySuccess")}
                   </div>
                 ) : (
                   <form onSubmit={(e) => { e.preventDefault(); if (email) setSubmitted(true); }} className="flex gap-2">

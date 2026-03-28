@@ -11,7 +11,7 @@ export default function Navbar({ locale }: { locale: string }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled((prev) => { const next = window.scrollY > 20; return prev === next ? prev : next; });
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

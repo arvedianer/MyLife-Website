@@ -2,13 +2,18 @@ import { useTranslations } from "next-intl";
 import FadeUp from "./FadeUp";
 import { Icons } from "./Icons";
 
-const pillarIcons = [Icons.Dumbbell, Icons.PieChart, Icons.Watch, Icons.HeartPulse];
+const pillarNodes = [
+  { Icon: Icons.Dumbbell,   color: "bg-indigo-500/10 border-indigo-500/20 text-indigo-400", style: { top: "-4px",  left: "50%", transform: "translateX(-50%)" } },
+  { Icon: Icons.PieChart,   color: "bg-amber-500/10 border-amber-500/20 text-amber-400",   style: { top: "50%",   right: "-4px", transform: "translateY(-50%)" } },
+  { Icon: Icons.Watch,      color: "bg-green-500/10 border-green-500/20 text-green-400",   style: { bottom: "-4px", left: "50%", transform: "translateX(-50%)" } },
+  { Icon: Icons.HeartPulse, color: "bg-violet-500/10 border-violet-500/20 text-violet-400", style: { top: "50%",  left: "-4px", transform: "translateY(-50%)" } },
+];
 
 export default function ImprovementSection() {
   const t = useTranslations("improvement");
-  const pillars = [0, 1, 2, 3].map((i) => ({
+  const pillars = pillarNodes.map(({ Icon, color, style }, i) => ({
+    Icon, color, style,
     label: t(`pillars.${i}.label`),
-    Icon: pillarIcons[i]!,
   }));
   const benefits = [0, 1, 2, 3].map((i) => t(`benefits.${i}`));
 
@@ -41,32 +46,18 @@ export default function ImprovementSection() {
               </div>
 
               {/* Pillar nodes — positioned at top/right/bottom/left */}
-              {pillars.map((p, i) => {
-                const positions = [
-                  { top: "-4px", left: "50%", transform: "translateX(-50%)" },
-                  { top: "50%", right: "-4px", transform: "translateY(-50%)" },
-                  { bottom: "-4px", left: "50%", transform: "translateX(-50%)" },
-                  { top: "50%", left: "-4px", transform: "translateY(-50%)" },
-                ];
-                const colors = [
-                  "bg-indigo-500/10 border-indigo-500/20 text-indigo-400",
-                  "bg-amber-500/10 border-amber-500/20 text-amber-400",
-                  "bg-green-500/10 border-green-500/20 text-green-400",
-                  "bg-violet-500/10 border-violet-500/20 text-violet-400",
-                ];
-                return (
-                  <div
-                    key={i}
-                    className="absolute z-20 flex flex-col items-center gap-1"
-                    style={positions[i]}
-                  >
-                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center ${colors[i]}`}>
-                      <p.Icon className="w-5 h-5" />
-                    </div>
-                    <span className="text-[9px] text-slate-500 font-medium whitespace-nowrap">{p.label}</span>
+              {pillars.map((p, i) => (
+                <div
+                  key={i}
+                  className="absolute z-20 flex flex-col items-center gap-1"
+                  style={p.style}
+                >
+                  <div className={`w-12 h-12 rounded-xl border flex items-center justify-center ${p.color}`}>
+                    <p.Icon className="w-5 h-5" />
                   </div>
-                );
-              })}
+                  <span className="text-[9px] text-slate-500 font-medium whitespace-nowrap">{p.label}</span>
+                </div>
+              ))}
             </div>
           </FadeUp>
 

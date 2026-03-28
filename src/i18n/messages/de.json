@@ -126,7 +126,8 @@
     ],
     "notifyLabel": "Benachrichtige mich, wenn Nutrition verfügbar ist",
     "notifyPlaceholder": "deine@email.de",
-    "notifyButton": "Benachrichtigen"
+    "notifyButton": "Benachrichtigen",
+    "notifySuccess": "Eingetragen — du wirst benachrichtigt!"
   },
   "improvement": {
     "badge": "Vision – In Vorbereitung",
@@ -241,7 +242,9 @@
     "newsletterTitle": "Bleib auf dem Laufenden",
     "newsletterSubtitle": "Erfahre als Erster, wenn Nutrition und Improvement verfügbar sind.",
     "placeholder": "deine@email.de",
-    "button": "Benachrichtigen"
+    "button": "Benachrichtigen",
+    "successMessage": "Du bist dabei — wir melden uns!",
+    "features": ["Kostenlos", "Keine Kreditkarte", "Sofort loslegen"]
   },
   "footer": {
     "tagline": "Dein Ökosystem für Training, Ernährung und Weiterentwicklung.",

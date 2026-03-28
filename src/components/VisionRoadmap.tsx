@@ -2,46 +2,22 @@ import { useTranslations } from "next-intl";
 import FadeUp from "./FadeUp";
 import { Icons } from "./Icons";
 
-const roadmapIcons = [
-  Icons.Bot,
-  Icons.Camera,
-  Icons.Moon,
-  Icons.Apple,
-  Icons.Trophy,
-  Icons.HeartPulse,
-  Icons.Watch,
-  Icons.WifiOff,
-];
-
-const iconColors = [
-  "text-indigo-400",
-  "text-violet-400",
-  "text-blue-400",
-  "text-green-400",
-  "text-amber-400",
-  "text-pink-400",
-  "text-cyan-400",
-  "text-slate-400",
-];
-
-const iconBgs = [
-  "bg-indigo-500/8 border-indigo-500/15",
-  "bg-violet-500/8 border-violet-500/15",
-  "bg-blue-500/8 border-blue-500/15",
-  "bg-green-500/8 border-green-500/15",
-  "bg-amber-500/8 border-amber-500/15",
-  "bg-pink-500/8 border-pink-500/15",
-  "bg-cyan-500/8 border-cyan-500/15",
-  "bg-slate-500/8 border-slate-500/15",
+const roadmapItems = [
+  { Icon: Icons.Bot,        color: "text-indigo-400", bg: "bg-indigo-500/8 border-indigo-500/15" },
+  { Icon: Icons.Camera,     color: "text-violet-400",  bg: "bg-violet-500/8 border-violet-500/15" },
+  { Icon: Icons.Moon,       color: "text-blue-400",    bg: "bg-blue-500/8 border-blue-500/15" },
+  { Icon: Icons.Apple,      color: "text-green-400",   bg: "bg-green-500/8 border-green-500/15" },
+  { Icon: Icons.Trophy,     color: "text-amber-400",   bg: "bg-amber-500/8 border-amber-500/15" },
+  { Icon: Icons.HeartPulse, color: "text-pink-400",    bg: "bg-pink-500/8 border-pink-500/15" },
+  { Icon: Icons.Watch,      color: "text-cyan-400",    bg: "bg-cyan-500/8 border-cyan-500/15" },
+  { Icon: Icons.WifiOff,    color: "text-slate-400",   bg: "bg-slate-500/8 border-slate-500/15" },
 ];
 
 export default function VisionRoadmap() {
   const t = useTranslations("roadmap");
 
-  const items = [0, 1, 2, 3, 4, 5, 6, 7].map((i) => ({
-    Icon: roadmapIcons[i],
-    color: iconColors[i],
-    bg: iconBgs[i],
+  const items = roadmapItems.map(({ Icon, color, bg }, i) => ({
+    Icon, color, bg,
     title: t(`items.${i}.title`),
     description: t(`items.${i}.description`),
   }));
@@ -68,11 +44,9 @@ export default function VisionRoadmap() {
           {items.map((item, i) => (
             <FadeUp key={i} delay={i * 0.06}>
               <div className="relative group h-full rounded-2xl p-6 steam-card transition-all duration-300 hover:-translate-y-1 cursor-default">
-                {/* Hover glow */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/0 to-indigo-600/0 group-hover:from-violet-600/6 group-hover:to-indigo-600/4 transition-all duration-300" />
 
                 <div className="relative z-10">
-                  {/* Number + icon row */}
                   <div className="flex items-center justify-between mb-4">
                     <div className={`w-10 h-10 rounded-xl border flex items-center justify-center ${item.bg} ${item.color}`}>
                       <item.Icon className="w-5 h-5" />
@@ -82,7 +56,6 @@ export default function VisionRoadmap() {
                     </span>
                   </div>
 
-                  {/* Badge */}
                   <span className="badge-planned mb-3">
                     {t("plannedBadge")}
                   </span>

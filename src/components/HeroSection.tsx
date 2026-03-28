@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Icons } from "./Icons";
-
-const ease: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
+import { ease } from "@/lib/animation";
 
 export default function HeroSection() {
   const t = useTranslations("hero");

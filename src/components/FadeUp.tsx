@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ease } from "@/lib/animation";
 
 interface FadeUpProps {
   children: React.ReactNode;
@@ -30,7 +31,7 @@ export default function FadeUp({
       transition={{
         duration,
         delay,
-        ease: [0.21, 0.47, 0.32, 0.98],
+        ease,
       }}
     >
       {children}

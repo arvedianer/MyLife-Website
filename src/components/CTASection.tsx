@@ -52,18 +52,12 @@ export default function CTASection() {
               </a>
 
               <p className="mt-5 text-xs text-slate-600 flex items-center justify-center gap-4">
-                <span className="flex items-center gap-1.5">
-                  <Icons.Check className="w-3.5 h-3.5 text-green-500/60" />
-                  Kostenlos
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Icons.Check className="w-3.5 h-3.5 text-green-500/60" />
-                  Keine Kreditkarte
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Icons.Check className="w-3.5 h-3.5 text-green-500/60" />
-                  Sofort loslegen
-                </span>
+                {[0, 1, 2].map((i) => (
+                  <span key={i} className="flex items-center gap-1.5">
+                    <Icons.Check className="w-3.5 h-3.5 text-green-500/60" />
+                    {t(`features.${i}`)}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
@@ -78,7 +72,7 @@ export default function CTASection() {
             {submitted ? (
               <div className="flex items-center justify-center gap-2 text-green-400 font-medium">
                 <Icons.Check className="w-5 h-5" />
-                Du bist dabei — wir melden uns!
+                {t("successMessage")}
               </div>
             ) : (
               <form
