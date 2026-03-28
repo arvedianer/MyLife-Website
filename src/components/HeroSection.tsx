@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import ParticleCanvas from "./ParticleCanvas";
 
-const ease = [0.16, 1, 0.3, 1] as const;
+const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -113,6 +113,7 @@ export default function HeroSection() {
         animate={{ opacity: 0.35 }}
         transition={{ delay: 1.2, duration: 1, ease }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+        aria-hidden="true"
       >
         <div
           className="w-px h-10 animate-pulse"
