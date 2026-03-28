@@ -57,10 +57,7 @@ export default async function LocaleLayout({
       lang={locale}
       className={`scroll-smooth ${barlow.variable} ${manrope.variable} ${courierPrime.variable}`}
     >
-      <body
-        className="bg-bg text-white antialiased font-manrope"
-        style={{ backgroundColor: "#080808" }}
-      >
+      <body className="bg-bg text-white antialiased font-manrope">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
