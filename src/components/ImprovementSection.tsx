@@ -1,102 +1,90 @@
 import { useTranslations } from "next-intl";
+import FadeUp from "./FadeUp";
+import { Icons } from "./Icons";
+
+const pillarIcons = [Icons.Dumbbell, Icons.PieChart, Icons.Watch, Icons.HeartPulse];
 
 export default function ImprovementSection() {
   const t = useTranslations("improvement");
-
   const pillars = [0, 1, 2, 3].map((i) => ({
-    icon: t(`pillars.${i}.icon`),
     label: t(`pillars.${i}.label`),
+    Icon: pillarIcons[i]!,
   }));
-
   const benefits = [0, 1, 2, 3].map((i) => t(`benefits.${i}`));
 
   return (
     <section id="improvement" className="py-32 px-4 relative">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/8 to-transparent pointer-events-none" />
+      <div className="divider absolute top-0 inset-x-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/6 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <p className="section-number mb-4">{t("badge")}</p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5">
-            {t("title")}
-          </h2>
-          <p className="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
-            {t("subtitle")}
-          </p>
-        </div>
+        <FadeUp className="text-center mb-20">
+          <p className="label mb-4">{t("badge")}</p>
+          <h2 className="text-5xl sm:text-6xl font-black tracking-tighter text-white mb-5">{t("title")}</h2>
+          <p className="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">{t("subtitle")}</p>
+        </FadeUp>
 
-        <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-          {/* Left: Hub visualization */}
-          <div className="relative flex items-center justify-center min-h-[380px]">
-            {/* Outer glow ring */}
-            <div className="absolute w-72 h-72 rounded-full border border-indigo-500/10 animate-spin-slow" />
-            <div className="absolute w-52 h-52 rounded-full border border-violet-500/15" />
+        <div className="grid lg:grid-cols-2 gap-16 xl:gap-28 items-center">
 
-            {/* Center node */}
-            <div className="absolute z-20 w-24 h-24 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 flex flex-col items-center justify-center shadow-2xl shadow-indigo-500/30 border border-indigo-400/30">
-              <span className="text-2xl">✨</span>
-              <span className="text-[9px] text-indigo-200 font-bold mt-0.5 text-center leading-tight px-2">
-                {t("combinesTo").split(" ")[0]}
-              </span>
-            </div>
+          {/* Left: Hub diagram */}
+          <FadeUp delay={0.1} className="flex items-center justify-center min-h-[400px]">
+            <div className="relative w-72 h-72">
+              {/* Orbit rings */}
+              <div className="absolute inset-0 rounded-full border border-white/4 animate-spin-slow" />
+              <div className="absolute inset-8 rounded-full border border-violet-500/8" />
 
-            {/* Pillar nodes */}
-            {pillars.map((p, i) => {
-              const angles = [-90, 0, 90, 180];
-              const angle = ((angles[i] ?? 0) * Math.PI) / 180;
-              const r = 130;
-              const x = r * Math.cos(angle);
-              const y = r * Math.sin(angle);
-
-              return (
-                <div
-                  key={i}
-                  className="absolute z-10"
-                  style={{ transform: `translate(${x}px, ${y}px)` }}
-                >
-                  {/* Connector line */}
-                  <div
-                    className="absolute top-1/2 left-1/2 bg-gradient-to-r from-indigo-500/30 to-transparent h-px"
-                    style={{
-                      width: `${r - 48}px`,
-                      transform: `rotate(${angles[i] + 180}deg)`,
-                      transformOrigin: "left center",
-                    }}
-                  />
-                  {/* Node */}
-                  <div className="relative w-14 h-14 rounded-2xl bg-[#0f172a] border border-white/10 flex flex-col items-center justify-center gap-0.5 -translate-x-1/2 -translate-y-1/2 shadow-lg">
-                    <span className="text-lg">{p.icon}</span>
-                    <span className="text-[9px] text-slate-400 font-medium">{p.label}</span>
-                  </div>
+              {/* Center */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 flex flex-col items-center justify-center shadow-2xl shadow-indigo-500/30 border border-indigo-400/20 z-10">
+                  <Icons.Sparkles className="w-7 h-7 text-white" />
                 </div>
-              );
-            })}
-          </div>
+              </div>
+
+              {/* Pillar nodes — positioned at top/right/bottom/left */}
+              {pillars.map((p, i) => {
+                const positions = [
+                  { top: "-4px", left: "50%", transform: "translateX(-50%)" },
+                  { top: "50%", right: "-4px", transform: "translateY(-50%)" },
+                  { bottom: "-4px", left: "50%", transform: "translateX(-50%)" },
+                  { top: "50%", left: "-4px", transform: "translateY(-50%)" },
+                ];
+                const colors = [
+                  "bg-indigo-500/10 border-indigo-500/20 text-indigo-400",
+                  "bg-amber-500/10 border-amber-500/20 text-amber-400",
+                  "bg-green-500/10 border-green-500/20 text-green-400",
+                  "bg-violet-500/10 border-violet-500/20 text-violet-400",
+                ];
+                return (
+                  <div
+                    key={i}
+                    className="absolute z-20 flex flex-col items-center gap-1"
+                    style={positions[i]}
+                  >
+                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center ${colors[i]}`}>
+                      <p.Icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-[9px] text-slate-500 font-medium whitespace-nowrap">{p.label}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </FadeUp>
 
           {/* Right: Benefits */}
           <div>
-            <p className="text-slate-400 mb-10 leading-relaxed">{t("description")}</p>
-
-            <ul className="space-y-4">
+            <FadeUp delay={0.05}>
+              <p className="text-slate-500 mb-10 leading-relaxed">{t("description")}</p>
+            </FadeUp>
+            <ul className="space-y-3">
               {benefits.map((benefit, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-4 p-4 rounded-2xl card-gradient-border bg-[#0f172a] transition-all duration-200 hover:-translate-y-0.5"
-                >
-                  <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center mt-0.5">
-                    <svg
-                      className="w-3.5 h-3.5 text-indigo-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-300 leading-relaxed">{benefit}</span>
-                </li>
+                <FadeUp key={i} delay={0.1 + i * 0.08}>
+                  <li className="flex items-start gap-4 p-4 card rounded-xl transition-all duration-200 hover:-translate-y-0.5 cursor-default">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-indigo-500/10 border border-indigo-500/15 flex items-center justify-center mt-0.5">
+                      <Icons.Check className="w-3.5 h-3.5 text-indigo-400" />
+                    </div>
+                    <span className="text-sm text-slate-300 leading-relaxed">{benefit}</span>
+                  </li>
+                </FadeUp>
               ))}
             </ul>
           </div>

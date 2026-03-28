@@ -1,89 +1,139 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Icons } from "./Icons";
+
+const ease: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const lines = t("headline").split("\n");
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden grid-bg">
-      {/* Animated gradient orbs */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden dot-grid">
+      {/* ── Aurora background ───────────────────────────── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="animate-blob absolute top-[-200px] left-[-100px] w-[700px] h-[700px] rounded-full bg-indigo-700/20 blur-[120px]" />
-        <div className="animate-blob-delay absolute bottom-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-violet-700/15 blur-[120px]" />
-        <div className="animate-blob-delay2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-purple-600/10 blur-[100px]" />
+        {/* Main aurora orbs */}
+        <div className="animate-blob absolute -top-48 -left-32 w-[800px] h-[800px] rounded-full bg-indigo-700/25 blur-[140px]" />
+        <div className="animate-blob-2 absolute -bottom-48 -right-32 w-[700px] h-[700px] rounded-full bg-violet-700/20 blur-[130px]" />
+        <div className="animate-blob-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-cyan-600/10 blur-[110px]" />
+        {/* Radial vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,transparent_0%,rgba(6,9,18,0.9)_80%)]" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 inset-x-0 h-56 bg-gradient-to-t from-[#060912] to-transparent" />
       </div>
 
-      {/* Radial fade at bottom */}
-      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none" />
+      {/* ── Content ─────────────────────────────────────── */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        {/* Badge */}
-        <div className="animate-fade-up inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-indigo-500/20 bg-indigo-500/8 text-indigo-300 text-sm font-medium mb-10 backdrop-blur-sm">
+        {/* Live badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease }}
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full mb-12 glass cursor-default"
+        >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
           </span>
-          {t("badge")}
-        </div>
+          <span className="text-sm text-slate-300 font-medium tracking-wide">{t("badge")}</span>
+        </motion.div>
 
         {/* Headline */}
-        <h1 className="animate-fade-up delay-100 text-6xl sm:text-7xl md:text-8xl font-black tracking-tight leading-[0.95] mb-8">
-          <span className="block text-white">{t("headline").split("\n")[0]}</span>
-          <span className="block text-shimmer mt-2">{t("headline").split("\n")[1]}</span>
-          <span className="block text-white/40 mt-2 text-5xl sm:text-6xl md:text-7xl">{t("headline").split("\n")[2]}</span>
-        </h1>
+        <div className="mb-8 overflow-hidden">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.1, delay: 0.1 }}
+            className="font-black tracking-tighter leading-[0.9]"
+          >
+            {lines.map((line, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 + i * 0.12, ease }}
+                className={`block ${
+                  i === 0
+                    ? "text-[clamp(4rem,12vw,9rem)] text-white"
+                    : i === 1
+                    ? "text-[clamp(4rem,12vw,9rem)] text-shimmer"
+                    : "text-[clamp(2.8rem,8vw,6.5rem)] text-white/30 mt-2"
+                }`}
+              >
+                {line}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
 
         {/* Subline */}
-        <p className="animate-fade-up delay-200 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.55, ease }}
+          className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
           {t("subline")}
-        </p>
+        </motion.p>
 
-        {/* CTA */}
-        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.7, ease }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
           <a
             href={t("ctaUrl")}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2.5 px-9 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-base transition-all duration-300 hover:scale-[1.04] btn-glow"
+            className="group btn-primary inline-flex items-center gap-3 px-10 py-4 text-base"
           >
             {t("cta")}
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <Icons.ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
           </a>
           <a
             href="#ecosystem"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-white/10 text-slate-300 hover:text-white hover:border-white/20 font-medium text-base transition-all duration-200 backdrop-blur-sm"
+            className="btn-ghost inline-flex items-center gap-2.5 px-8 py-4 text-base font-medium"
           >
             {t("ctaSecondary")}
+            <Icons.ChevronDown className="w-4 h-4" />
           </a>
-        </div>
+        </motion.div>
 
         {/* Stats */}
-        <div className="animate-fade-up delay-400 mt-20 grid grid-cols-3 gap-2 max-w-sm mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.9, ease }}
+          className="mt-20 grid grid-cols-3 gap-3 max-w-xs mx-auto"
+        >
           {[
             { value: t("stat1Value"), label: t("stat1Label") },
             { value: t("stat2Value"), label: t("stat2Label") },
             { value: t("stat3Value"), label: t("stat3Label") },
           ].map((stat, i) => (
-            <div key={i} className="text-center py-4 px-3 rounded-2xl glass">
-              <div className="text-2xl sm:text-3xl font-black text-gradient">{stat.value}</div>
-              <div className="text-[11px] text-slate-500 mt-1 leading-tight">{stat.label}</div>
+            <div key={i} className="glass rounded-2xl px-3 py-4 text-center cursor-default">
+              <div className="text-2xl font-black text-gradient">{stat.value}</div>
+              <div className="text-[10px] text-slate-500 mt-1 leading-tight">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-        <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ delay: 1.4, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+      >
+        <div className="w-px h-10 bg-gradient-to-b from-transparent via-slate-500 to-transparent" />
+        <Icons.ChevronDown className="w-4 h-4 text-slate-500 animate-bounce" />
+      </motion.div>
     </section>
   );
 }
