@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { FloatingNavbar } from "@/components/FloatingNavbar";
 import HeroSection from "@/components/HeroSection";
 import EcosystemOverview from "@/components/EcosystemOverview";
 import TrainingSection from "@/components/TrainingSection";
@@ -19,6 +20,7 @@ export default async function Home({
   return (
     <>
       <Navbar locale={locale} />
+      <FloatingNavbar />
       <main>
         <HeroSection />
         <EcosystemOverview />
