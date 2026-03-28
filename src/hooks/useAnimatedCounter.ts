@@ -12,6 +12,7 @@ export function useAnimatedCounter(
   const hasStarted = useRef(false);
 
   useEffect(() => {
+    hasStarted.current = false;
     const el = ref.current;
     if (!el) return;
 

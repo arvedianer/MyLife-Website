@@ -55,7 +55,7 @@ export function useParticleCanvas(
     const RETURN_FORCE = 0.015;
 
     const tick = () => {
-      if (!heroVisible) { rafId = requestAnimationFrame(tick); return; }
+      if (!heroVisible) { return; }
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -102,12 +102,22 @@ export function useParticleCanvas(
     const handleResize = () => { resize(); initParticles(); };
 
     const observer = new IntersectionObserver(
-      ([entry]) => { heroVisible = entry.isIntersecting; },
+      ([entry]) => {
+        const wasVisible = heroVisible;
+        heroVisible = entry.isIntersecting;
+        if (!wasVisible && heroVisible) {
+          rafId = requestAnimationFrame(tick);
+        }
+      },
       { threshold: 0 }
     );
     observer.observe(canvas);
 
     resize();
+    if (canvas.width === 0) {
+      requestAnimationFrame(() => { resize(); initParticles(); rafId = requestAnimationFrame(tick); });
+      return;
+    }
     initParticles();
     rafId = requestAnimationFrame(tick);
 
