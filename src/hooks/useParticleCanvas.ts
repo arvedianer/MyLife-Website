@@ -10,18 +10,15 @@ interface Particle {
   radius: number;
 }
 
-interface Options {
-  count: number;
-  reducedMotion: boolean;
-}
-
 export function useParticleCanvas(
-  canvasRef: RefObject<HTMLCanvasElement | null>,
-  { count, reducedMotion }: Options
+  canvasRef: RefObject<HTMLCanvasElement | null>
 ) {
   useEffect(() => {
+    const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const count = prefersReduced ? 0 : (typeof window !== 'undefined' && window.innerWidth > 768) ? 2000 : 500;
+
     const canvas = canvasRef.current;
-    if (!canvas || reducedMotion || count === 0) return;
+    if (!canvas || count === 0) return;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -125,5 +122,5 @@ export function useParticleCanvas(
       window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
     };
-  }, [canvasRef, count, reducedMotion]);
+  }, [canvasRef]);
 }

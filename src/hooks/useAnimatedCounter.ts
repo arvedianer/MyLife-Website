@@ -15,6 +15,8 @@ export function useAnimatedCounter(
     const el = ref.current;
     if (!el) return;
 
+    let rafHandle = 0;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasStarted.current) {
@@ -26,18 +28,18 @@ export function useAnimatedCounter(
             const progress = Math.min(elapsed / duration, 1);
             // ease-out quad
             const eased = 1 - (1 - progress) * (1 - progress);
-            const current = Math.round(eased * target);
-            setDisplayValue(current + suffix);
-            if (progress < 1) requestAnimationFrame(tick);
+            const current = eased * target;
+            setDisplayValue(Math.round(current).toLocaleString() + suffix);
+            if (progress < 1) rafHandle = requestAnimationFrame(tick);
           };
-          requestAnimationFrame(tick);
+          rafHandle = requestAnimationFrame(tick);
         }
       },
       { threshold: 0.5 }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => { cancelAnimationFrame(rafHandle); observer.disconnect(); };
   }, [target, duration, suffix]);
 
   return { ref, displayValue };

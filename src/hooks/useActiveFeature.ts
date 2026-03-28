@@ -35,7 +35,7 @@ export function useActiveFeature(count: number): {
     });
 
     return () => observers.current.forEach((o) => o.disconnect());
-  });
+  }, [count]);
 
   return { activeFeature, setActiveFeature, getSentinelRef };
 }
