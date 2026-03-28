@@ -74,8 +74,8 @@ export default function CompetitorTable() {
             {rows.map(({ key, values }, rowIndex) => (
               <motion.tr
                 key={key}
-                initial={{ opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: rowIndex * 0.05, ease }}
                 style={{ borderBottom: rowIndex < rows.length - 1 ? "1px solid var(--border)" : "none" }}
