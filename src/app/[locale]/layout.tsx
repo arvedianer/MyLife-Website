@@ -28,9 +28,24 @@ const courierPrime = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "MyLife – Training, Nutrition & Life",
+  title: "MyLife – Training, Nutrition & Life | Kostenlos",
   description:
-    "Die App-Familie für Lifter. Training tracken, Makros berechnen, Gewohnheiten aufbauen – alles verbunden. Kostenlos.",
+    "Die smartste Trainings-App die du nie kaufen musst. KI-Gewichtsvorschläge, Athlete Score, Coach Arved — kostenlos. Von einem Lifter für Lifter.",
+  keywords: ["Training App", "Workout Tracker", "Athleten Score", "KI Coach", "Fitness App kostenlos", "MyLife Training"],
+  openGraph: {
+    title: "MyLife – Training, Nutrition & Life",
+    description: "Die smartste Trainings-App die du nie kaufen musst. Kostenlos.",
+    url: "https://mylife-website.vercel.app",
+    siteName: "MyLife",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyLife – Training, Nutrition & Life",
+    description: "KI-Coach, Athlete Score, Muskel-Heatmap — kostenlos.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export function generateStaticParams() {

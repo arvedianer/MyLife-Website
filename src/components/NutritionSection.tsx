@@ -7,7 +7,7 @@ import IPhoneFrame from "./IPhoneFrame";
 
 export default function NutritionSection() {
   const t = useTranslations("nutrition");
-  const features = [0, 1, 2, 3].map((i) => t(`f${i}`));
+  const features = [0, 1, 2, 3].map((i) => t(`f${i}` as "f0" | "f1" | "f2" | "f3"));
 
   return (
     <section id="nutrition" className="py-28 px-6 relative overflow-hidden">
@@ -16,7 +16,7 @@ export default function NutritionSection() {
       {/* Emerald ambient glow */}
       <div
         className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(52,211,153,0.12) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse, rgba(52,211,153,0.08) 0%, transparent 70%)" }}
       />
 
       <div className="max-w-6xl mx-auto">
@@ -24,19 +24,13 @@ export default function NutritionSection() {
           {/* Left: Content */}
           <div>
             <FadeUp>
-              <p
-                className="font-manrope text-xs font-semibold uppercase tracking-widest mb-4"
-                style={{ color: "var(--emerald)" }}
-              >
+              <p className="font-manrope text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--emerald)" }}>
                 {t("label")}
               </p>
-              <h2
-                className="font-barlow font-black text-white tracking-tight mb-4 leading-none"
-                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-              >
+              <h2 className="font-barlow font-black text-white tracking-tight mb-4 leading-none" style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
                 {t("headline")}
               </h2>
-              <p className="font-manrope text-sm mb-10" style={{ color: "var(--text-muted)" }}>
+              <p className="font-manrope text-sm mb-10" style={{ color: "var(--text-muted)", lineHeight: 1.8 }}>
                 {t("subline")}
               </p>
             </FadeUp>
@@ -45,12 +39,8 @@ export default function NutritionSection() {
               {features.map((feature, i) => (
                 <FadeUp key={i} delay={0.08 + i * 0.06}>
                   <div className="flex items-start gap-3">
-                    <Lock
-                      className="w-4 h-4 mt-0.5 flex-shrink-0"
-                      style={{ color: "var(--emerald)", opacity: 0.45 }}
-                      aria-hidden="true"
-                    />
-                    <span className="font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
+                    <Lock className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--emerald)", opacity: 0.4 }} aria-hidden="true" />
+                    <span className="font-manrope text-sm" style={{ color: "var(--text-muted)", lineHeight: 1.7 }}>
                       {feature}
                     </span>
                   </div>
@@ -67,9 +57,9 @@ export default function NutritionSection() {
           <FadeUp delay={0.2} className="flex justify-center">
             <div className="relative">
               {/* Blurred phone */}
-              <div className="opacity-50 blur-sm pointer-events-none select-none">
+              <div className="opacity-40 blur-sm pointer-events-none select-none">
                 <IPhoneFrame
-                  src="/mockups/training-dashboard.svg"
+                  src="/screenshots/app-dashboard-mobile.png"
                   alt="MyLife Nutrition preview"
                   accentColor="var(--emerald)"
                 />
@@ -78,12 +68,8 @@ export default function NutritionSection() {
               {/* Coming Soon overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="glass rounded-2xl px-8 py-5 text-center">
-                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">
-                    Coming Soon
-                  </p>
-                  <p className="font-manrope text-xs" style={{ color: "var(--emerald)" }}>
-                    MyLife Nutrition
-                  </p>
+                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">Coming Soon</p>
+                  <p className="font-manrope text-xs" style={{ color: "var(--emerald)" }}>MyLife Nutrition</p>
                 </div>
               </div>
             </div>

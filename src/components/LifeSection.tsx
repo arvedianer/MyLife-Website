@@ -7,7 +7,7 @@ import IPhoneFrame from "./IPhoneFrame";
 
 export default function LifeSection() {
   const t = useTranslations("life");
-  const features = [0, 1, 2, 3].map((i) => t(`f${i}`));
+  const features = [0, 1, 2, 3].map((i) => t(`f${i}` as "f0" | "f1" | "f2" | "f3"));
 
   return (
     <section id="life" className="py-28 px-6 relative overflow-hidden">
@@ -16,7 +16,7 @@ export default function LifeSection() {
       {/* Amber ambient glow */}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(251,191,36,0.10) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse, rgba(251,191,36,0.07) 0%, transparent 70%)" }}
       />
 
       <div className="max-w-6xl mx-auto">
@@ -25,9 +25,9 @@ export default function LifeSection() {
           <FadeUp delay={0.2} className="flex justify-center order-2 lg:order-1">
             <div className="relative">
               {/* Blurred phone */}
-              <div className="opacity-50 blur-sm pointer-events-none select-none">
+              <div className="opacity-40 blur-sm pointer-events-none select-none">
                 <IPhoneFrame
-                  src="/mockups/training-dashboard.svg"
+                  src="/screenshots/app-stats-mobile.png"
                   alt="MyLife Life preview"
                   accentColor="var(--amber)"
                 />
@@ -36,12 +36,8 @@ export default function LifeSection() {
               {/* In Planung overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="glass rounded-2xl px-8 py-5 text-center">
-                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">
-                    {t("label")}
-                  </p>
-                  <p className="font-manrope text-xs" style={{ color: "var(--amber)" }}>
-                    MyLife Life
-                  </p>
+                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">{t("label")}</p>
+                  <p className="font-manrope text-xs" style={{ color: "var(--amber)" }}>MyLife Life</p>
                 </div>
               </div>
             </div>
@@ -50,19 +46,13 @@ export default function LifeSection() {
           {/* Right: Content */}
           <div className="order-1 lg:order-2">
             <FadeUp>
-              <p
-                className="font-manrope text-xs font-semibold uppercase tracking-widest mb-4"
-                style={{ color: "var(--amber)" }}
-              >
+              <p className="font-manrope text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--amber)" }}>
                 {t("label")}
               </p>
-              <h2
-                className="font-barlow font-black text-white tracking-tight mb-4 leading-none"
-                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-              >
+              <h2 className="font-barlow font-black text-white tracking-tight mb-4 leading-none" style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
                 {t("headline")}
               </h2>
-              <p className="font-manrope text-sm mb-10" style={{ color: "var(--text-muted)" }}>
+              <p className="font-manrope text-sm mb-10" style={{ color: "var(--text-muted)", lineHeight: 1.8 }}>
                 {t("subline")}
               </p>
             </FadeUp>
@@ -71,12 +61,8 @@ export default function LifeSection() {
               {features.map((feature, i) => (
                 <FadeUp key={i} delay={0.08 + i * 0.06}>
                   <div className="flex items-start gap-3">
-                    <Lock
-                      className="w-4 h-4 mt-0.5 flex-shrink-0"
-                      style={{ color: "var(--amber)", opacity: 0.45 }}
-                      aria-hidden="true"
-                    />
-                    <span className="font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
+                    <Lock className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--amber)", opacity: 0.4 }} aria-hidden="true" />
+                    <span className="font-manrope text-sm" style={{ color: "var(--text-muted)", lineHeight: 1.7 }}>
                       {feature}
                     </span>
                   </div>

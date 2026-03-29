@@ -4,30 +4,67 @@ interface IPhoneFrameProps {
   src: string;
   alt: string;
   accentColor?: string;
+  priority?: boolean;
 }
 
-export default function IPhoneFrame({ src, alt, accentColor = "#4DFFED" }: IPhoneFrameProps) {
+export default function IPhoneFrame({
+  src,
+  alt,
+  accentColor = "#4DFFED",
+  priority = false,
+}: IPhoneFrameProps) {
   return (
     <div
       className="relative mx-auto select-none"
       style={{
-        width: "280px",
-        height: "560px",
-        borderRadius: "40px",
-        border: "8px solid #1a1a1a",
-        background: "#0a0a0a",
-        boxShadow: `0 0 0 1px #333, 0 32px 80px rgba(0,0,0,0.8), 0 0 60px ${accentColor}18`,
+        width: "270px",
+        height: "585px",
+        borderRadius: "44px",
+        background: "#060606",
+        boxShadow: `
+          0 0 0 1px #2a2a2a,
+          0 0 0 2px #111,
+          0 40px 100px rgba(0,0,0,0.9),
+          0 0 80px ${accentColor}22
+        `,
+        padding: "10px",
       }}
     >
-      {/* Dynamic Island / Notch */}
+      {/* Side buttons (decorative) */}
       <div
         aria-hidden="true"
-        className="absolute top-0 left-1/2 -translate-x-1/2 z-10"
+        className="absolute"
         style={{
-          width: "88px",
-          height: "24px",
-          background: "#0a0a0a",
-          borderRadius: "0 0 14px 14px",
+          left: "-3px",
+          top: "100px",
+          width: "3px",
+          height: "32px",
+          background: "#1a1a1a",
+          borderRadius: "2px 0 0 2px",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute"
+        style={{
+          left: "-3px",
+          top: "144px",
+          width: "3px",
+          height: "60px",
+          background: "#1a1a1a",
+          borderRadius: "2px 0 0 2px",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute"
+        style={{
+          right: "-3px",
+          top: "144px",
+          width: "3px",
+          height: "80px",
+          background: "#1a1a1a",
+          borderRadius: "0 2px 2px 0",
         }}
       />
 
@@ -37,16 +74,29 @@ export default function IPhoneFrame({ src, alt, accentColor = "#4DFFED" }: IPhon
         style={{
           width: "100%",
           height: "100%",
-          borderRadius: "32px",
+          borderRadius: "34px",
+          background: "#080808",
         }}
       >
+        {/* Dynamic Island */}
+        <div
+          aria-hidden="true"
+          className="absolute top-2.5 left-1/2 -translate-x-1/2 z-10"
+          style={{
+            width: "90px",
+            height: "26px",
+            background: "#000",
+            borderRadius: "13px",
+          }}
+        />
+
         <Image
           src={src}
           alt={alt}
-          width={264}
-          height={544}
-          className="w-full h-full object-cover"
-          priority={false}
+          fill
+          className="object-cover object-top"
+          priority={priority}
+          sizes="270px"
         />
       </div>
     </div>

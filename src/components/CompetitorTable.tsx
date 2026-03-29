@@ -2,127 +2,142 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Check, X, AlertTriangle } from "lucide-react";
+import { Check, X, Minus } from "lucide-react";
+import FadeUp from "./FadeUp";
 
-type CellValue = "yes" | "no" | "partial";
+type CellValue = true | false | "partial";
 
-const rows: { key: string; values: [CellValue, CellValue, CellValue, CellValue] }[] = [
-  { key: "feature0", values: ["yes", "partial", "partial", "yes"] },
-  { key: "feature1", values: ["yes", "no", "no", "no"] },
-  { key: "feature2", values: ["yes", "no", "no", "no"] },
-  { key: "feature3", values: ["yes", "no", "no", "no"] },
-  { key: "feature4", values: ["yes", "yes", "no", "no"] },
-  { key: "feature5", values: ["yes", "no", "no", "no"] },
-  { key: "feature6", values: ["yes", "yes", "yes", "no"] },
-  { key: "feature7", values: ["yes", "no", "no", "no"] },
+interface Row {
+  key: string;
+  values: [CellValue, CellValue, CellValue, CellValue];
+}
+
+const ROWS: Row[] = [
+  { key: "feature0", values: [true,  false, false, false] },
+  { key: "feature1", values: [true,  false, false, false] },
+  { key: "feature2", values: [true,  false, false, false] },
+  { key: "feature3", values: [true,  false, false, false] },
+  { key: "feature4", values: [true,  false, false, false] },
+  { key: "feature5", values: [true,  true,  false, false] },
+  { key: "feature6", values: [true,  false, false, false] },
+  { key: "feature7", values: [true,  false, false, false] },
 ];
 
-const competitors = ["MyLife", "Hevy", "Strong", "FitNotes"];
+const APPS = ["MyLife Training", "Hevy", "Strong", "FitNotes"];
 
-const partialLabels: Record<string, string> = {
-  feature0: "Abo",
-};
-
-const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
+function Cell({ value, highlight }: { value: CellValue; highlight: boolean }) {
+  if (value === true) {
+    return (
+      <div className="flex justify-center">
+        <div
+          className="w-6 h-6 rounded-full flex items-center justify-center"
+          style={{ background: highlight ? "rgba(77,255,237,0.15)" : "rgba(52,199,89,0.1)" }}
+        >
+          <Check
+            className="w-3.5 h-3.5"
+            style={{ color: highlight ? "var(--cyan)" : "#34C759" }}
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    );
+  }
+  if (value === "partial") {
+    return (
+      <div className="flex justify-center">
+        <Minus className="w-4 h-4" style={{ color: "var(--text-dim)" }} aria-hidden="true" />
+      </div>
+    );
+  }
+  return (
+    <div className="flex justify-center">
+      <X className="w-3.5 h-3.5" style={{ color: "var(--text-dim)", opacity: 0.4 }} aria-hidden="true" />
+    </div>
+  );
+}
 
 export default function CompetitorTable() {
   const t = useTranslations("training.comparison");
 
   return (
-    <div>
-      {/* Heading */}
-      <div className="mb-10">
-        <h3
-          className="font-barlow font-black text-white tracking-tight mb-2"
-          style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-        >
+    <FadeUp>
+      <div className="max-w-3xl">
+        <p className="font-manrope text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--cyan)" }}>
+          Vergleich
+        </p>
+        <h3 className="font-barlow font-black text-white tracking-tight mb-2" style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}>
           {t("headline")}
         </h3>
-        <p className="font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
+        <p className="font-manrope text-sm mb-8" style={{ color: "var(--text-muted)" }}>
           {t("subline")}
         </p>
-      </div>
 
-      {/* Table */}
-      <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid var(--border)" }}>
-        <table className="w-full" style={{ borderCollapse: "collapse" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid var(--border)" }}>
-              <th
-                className="px-4 py-4 text-left font-manrope text-xs font-semibold"
-                style={{ color: "var(--text-dim)", width: "35%" }}
-              >
-                Feature
-              </th>
-              {competitors.map((c, i) => (
+        <div className="overflow-x-auto rounded-2xl" style={{ border: "1px solid var(--border)" }}>
+          <table className="w-full" style={{ borderCollapse: "collapse" }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid var(--border)" }}>
                 <th
-                  key={c}
-                  className="px-4 py-4 text-center font-manrope text-xs font-bold"
-                  style={{
-                    color: i === 0 ? "var(--cyan)" : "var(--text-dim)",
-                    background: i === 0 ? "rgba(77,255,237,0.04)" : "transparent",
-                    borderLeft: i === 0 ? "1px solid rgba(77,255,237,0.15)" : "none",
-                    borderRight: i === 0 ? "1px solid rgba(77,255,237,0.15)" : "none",
-                  }}
+                  className="text-left px-5 py-4 font-manrope text-xs uppercase tracking-widest"
+                  style={{ color: "var(--text-dim)", width: "40%" }}
                 >
-                  {c}
+                  Feature
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map(({ key, values }, rowIndex) => (
-              <motion.tr
-                key={key}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: rowIndex * 0.05, ease }}
-                style={{ borderBottom: rowIndex < rows.length - 1 ? "1px solid var(--border)" : "none" }}
-              >
-                <td className="px-4 py-4 font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
-                  {t(key)}
-                </td>
-                {values.map((v, colIndex) => (
-                  <td
-                    key={colIndex}
-                    className="px-4 py-4 text-center"
+                {APPS.map((app, i) => (
+                  <th
+                    key={app}
+                    className="px-3 py-4 text-center font-manrope text-xs font-bold"
                     style={{
-                      background: colIndex === 0 ? "rgba(77,255,237,0.03)" : "transparent",
-                      borderLeft: colIndex === 0 ? "1px solid rgba(77,255,237,0.1)" : "none",
-                      borderRight: colIndex === 0 ? "1px solid rgba(77,255,237,0.1)" : "none",
+                      color: i === 0 ? "var(--cyan)" : "var(--text-muted)",
+                      background: i === 0 ? "rgba(77,255,237,0.04)" : "transparent",
                     }}
                   >
-                    {v === "yes" && (
-                      <span className="inline-flex items-center justify-center">
-                        <Check
-                          className="w-4 h-4"
-                          style={{ color: colIndex === 0 ? "var(--cyan)" : "#34C759" }}
-                          aria-hidden="true"
-                        />
+                    {i === 0 ? (
+                      <span className="flex flex-col items-center gap-1.5">
+                        <span>{app}</span>
+                        <span className="badge-live">LIVE</span>
                       </span>
+                    ) : (
+                      app
                     )}
-                    {v === "no" && (
-                      <span className="inline-flex items-center justify-center">
-                        <X className="w-4 h-4" style={{ color: "var(--text-dim)" }} aria-hidden="true" />
-                      </span>
-                    )}
-                    {v === "partial" && (
-                      <span
-                        className="inline-flex items-center gap-1 text-xs font-manrope"
-                        style={{ color: "var(--amber)" }}
-                      >
-                        <AlertTriangle className="w-3.5 h-3.5" aria-hidden="true" />
-                        {partialLabels[key] ?? "~"}
-                      </span>
-                    )}
-                  </td>
+                  </th>
                 ))}
-              </motion.tr>
-            ))}
-          </tbody>
-        </table>
+              </tr>
+            </thead>
+            <tbody>
+              {ROWS.map((row, rowIdx) => (
+                <motion.tr
+                  key={row.key}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: rowIdx * 0.05 }}
+                  style={{
+                    borderBottom: rowIdx < ROWS.length - 1 ? "1px solid var(--border)" : "none",
+                  }}
+                >
+                  <td className="px-5 py-3.5 font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
+                    {t(row.key as Parameters<typeof t>[0])}
+                  </td>
+                  {row.values.map((val, colIdx) => (
+                    <td
+                      key={colIdx}
+                      className="px-3 py-3.5 text-center"
+                      style={{
+                        background: colIdx === 0 ? "rgba(77,255,237,0.02)" : "transparent",
+                      }}
+                    >
+                      <Cell value={val} highlight={colIdx === 0} />
+                    </td>
+                  ))}
+                </motion.tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="font-manrope text-xs mt-3" style={{ color: "var(--text-dim)" }}>
+          Stand: März 2026 — kostenlose Versionen verglichen.
+        </p>
       </div>
-    </div>
+    </FadeUp>
   );
 }

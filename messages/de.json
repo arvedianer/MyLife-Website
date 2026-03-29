@@ -3,7 +3,7 @@
     "badge": "Training ist live",
     "headline": "MY LIFE",
     "sub": "Training. Nutrition. Life.",
-    "subline": "Von einem Lifter für Lifter. Kostenlos.",
+    "subline": "Von einem 17-jährigen Lifter gebaut. Für alle die es ernst meinen. Kostenlos.",
     "cta": "Training App öffnen",
     "ctaSecondary": "Mehr erfahren",
     "ctaUrl": "https://mylifetraining.vercel.app"
@@ -18,101 +18,101 @@
   "ecosystem": {
     "label": "Das Ökosystem",
     "headline": "Drei Apps. Eine Vision.",
-    "subline": "Trainieren, ernähren, leben — alles verbunden.",
+    "subline": "Trainieren, ernähren, leben — alles verbunden. Alles kostenlos.",
     "training": {
       "name": "MyLife Training",
       "tagline": "Kraft tracken. Stärker werden.",
-      "f1": "KI-Gewichtsvorschläge",
-      "f2": "Athlete Score 0–1000",
-      "f3": "Coach Arved – persönlicher KI-Coach",
+      "f1": "KI-Gewichtsvorschläge & PR-Erkennung",
+      "f2": "Athlete Score — 5 Dimensionen, 0–1000",
+      "f3": "Coach Arved — dein persönlicher KI-Coach",
       "badge": "live"
     },
     "nutrition": {
       "name": "MyLife Nutrition",
       "tagline": "Makros die zu deinem Training passen.",
-      "f1": "Barcode-Scanner",
-      "f2": "KI-Ernährungsplan",
-      "f3": "Sync mit Training",
+      "f1": "Barcode-Scanner & Foto-Erkennung per KI",
+      "f2": "KI-Ernährungsplan basierend auf deinen Zielen",
+      "f3": "Sync mit MyLife Training",
       "badge": "soon"
     },
     "life": {
       "name": "MyLife Life",
-      "tagline": "Gewohnheiten die bleiben.",
-      "f1": "Tages-Routinen",
-      "f2": "Streak-Tracking",
-      "f3": "Sync mit Training & Nutrition",
+      "tagline": "Das Betriebssystem für dein Leben.",
+      "f1": "Training + Ernährung + Gewohnheiten zusammen",
+      "f2": "KI-Analysen: Was läuft gut, was nicht",
+      "f3": "Dein persönlicher KI-Coach auf Steroiden",
       "badge": "planned"
     }
   },
   "training": {
     "sectionLabel": "MyLife Training",
     "headline": "Die smartste Trainings-App die du nie kaufen musst.",
-    "subline": "KI-Gewichtsvorschläge, persönlicher Coach, Athlete Score — kostenlos.",
+    "subline": "Während andere Apps 10€/Monat kosten, bekommst du hier KI-Coach, Athlete Score und echtes Tracking — kostenlos.",
     "features": [
       {
-        "title": "Aktives Workout",
-        "subtitle": "KI-Gewichtsvorschläge, PR-Erkennung",
-        "description": "Progressive Overload automatisch. Die App schlägt das ideale Gewicht vor — basierend auf deiner Trainingshistorie."
+        "title": "Dashboard & Heatmap",
+        "subtitle": "Sieh auf einen Blick wie dein Körper belastet ist",
+        "description": "Muskel-Heatmap, Streak, Wochenvolumen — alles direkt auf der Startseite. Du siehst sofort was trainiert wurde und was noch fehlt."
       },
       {
-        "title": "Athlete Score",
-        "subtitle": "0–1000. Fünf Dimensionen.",
-        "description": "Kraft, Ausdauer, Konsistenz, Volumen, Fortschritt. Eine ehrliche Zahl die deinen gesamten Trainingsstand abbildet."
+        "title": "Statistiken & Athlete Score",
+        "subtitle": "0–1000. Fünf Dimensionen. Eine ehrliche Zahl.",
+        "description": "Stärke, Konsistenz, Volumen, Ausdauer, Ausgewogenheit. Der Score zeigt dir objektiv wo du wirklich stehst — nicht wo du denkst zu stehen."
       },
       {
         "title": "Coach Arved",
         "subtitle": "Kein Chatbot. Arved.",
-        "description": "Er kennt deine PRs, deine schwachen Muskeln, deine verpassten Sessions. Antwortet wie ein Mensch."
+        "description": "Er hat Zugriff auf alle deine Trainingsdaten — deine PRs, deine Schwachstellen, deine verpassten Sessions. Antwortet wie ein Mensch, denkt wie ein Trainer."
       },
       {
-        "title": "Splits & Pläne",
-        "subtitle": "Arnold, PPL, Bro Split — oder dein eigener",
-        "description": "Vorgefertigte Splits oder komplett eigene Planung. Alle Übungen, alle Muskelgruppen."
+        "title": "Splits & Trainingspläne",
+        "subtitle": "Arnold Split, PPL, Bro Split — oder dein eigener",
+        "description": "Vorgefertigte Splits von Anfänger bis Profi. Oder erstell deinen eigenen. Das System erkennt welcher Workout heute dran ist."
       },
       {
         "title": "Community & Forum",
-        "subtitle": "Live sehen wer gerade trainiert",
-        "description": "Sieh in Echtzeit wer im Gym ist. Cheffe-Rolle für die Stärksten. DMs, Forum, gemeinsam stärker."
+        "subtitle": "Sieh live wer gerade im Gym ist",
+        "description": "Echte Community. Du siehst wer gerade trainiert, kannst Workouts teilen und Gruppen erstellen. Trainieren ist besser zusammen."
       },
       {
-        "title": "Stats & Auswertung",
-        "subtitle": "Lebenszeit-Tracking deiner Stärke",
-        "description": "Volumen, Gewicht, Wiederholungen — alles über deine gesamte Trainingskarriere hinweg."
+        "title": "Training starten",
+        "subtitle": "Leeres Workout oder direkt aus dem Plan",
+        "description": "Rest Day Checkliste, Schnellstart oder direkt den heutigen Split-Workout. Plus: Übungen tauschen wenn etwas besetzt ist."
       }
     ],
     "comparison": {
       "headline": "Warum nicht einfach eine andere App?",
-      "subline": "Wir haben verglichen.",
-      "feature0": "Kostenlos",
-      "feature1": "KI-Coach",
+      "subline": "Wir haben verglichen. Objektiv.",
+      "feature0": "Komplett kostenlos",
+      "feature1": "Persönlicher KI-Coach",
       "feature2": "Progressive Overload KI",
-      "feature3": "Athlete Score",
-      "feature4": "Community / Forum",
-      "feature5": "PWA — kein App Store",
-      "feature6": "Dark Mode always",
+      "feature3": "Athlete Score (0–1000)",
+      "feature4": "Muskel-Heatmap",
+      "feature5": "Community & Forum",
+      "feature6": "PWA — kein App Store nötig",
       "feature7": "Deutsch"
     }
   },
   "nutrition": {
     "label": "Coming Soon",
     "headline": "Iss nicht ins Blaue.",
-    "subline": "KI-basiertes Ernährungs-Tracking. Makros die zu deinem Training passen.",
-    "f0": "Makro-Tracking mit Barcode-Scanner",
+    "subline": "KI-basiertes Ernährungs-Tracking das wirklich mit deinem Training spricht.",
+    "f0": "Makro-Tracking mit Barcode-Scanner & KI-Foto-Erkennung",
     "f1": "KI-Ernährungsplan basierend auf deinen Trainingszielen",
-    "f2": "Sync mit MyLife Training (Kalorien ↔ Workout-Volumen)",
-    "f3": "Wöchentliche KI-Anpassungen"
+    "f2": "Sync mit MyLife Training: Kalorien ↔ Workout-Volumen",
+    "f3": "Wöchentliche KI-Anpassungen deines Plans"
   },
   "life": {
     "label": "In Planung",
-    "headline": "Gewohnheiten die bleiben.",
-    "subline": "Nicht der 10. Habit-Tracker. Der einzige der mit deinem Training verbunden ist.",
-    "f0": "Tages-Routinen mit Reminder",
-    "f1": "Streak-Tracking mit Statistiken",
-    "f2": "Ziel-System mit Meilensteinen",
-    "f3": "Sync mit Training & Nutrition"
+    "headline": "Dein Leben. Optimiert.",
+    "subline": "Nicht der zehnte Habit-Tracker. Das erste System das Training, Ernährung und Gewohnheiten wirklich zusammenbringt.",
+    "f0": "Alle Daten aus Training + Nutrition zusammengefasst",
+    "f1": "KI-Analysen: Fett-Muskel-Verhältnis, Erholung, Fortschritt",
+    "f2": "Tages-Routinen, Ziele, Meilensteine",
+    "f3": "Dein persönlicher KI-Coach mit vollständigem Kontext"
   },
   "stats": {
-    "v0": "60+",
+    "v0": "100+",
     "l0": "Übungen in der Bibliothek",
     "v1": "100%",
     "l1": "Kostenlos. Immer.",
@@ -124,7 +124,7 @@
     "subline": "Starte dein erstes Workout in 2 Minuten.",
     "primary": "Training App öffnen",
     "ctaUrl": "https://mylifetraining.vercel.app",
-    "donationCopy": "Diese App entsteht in der Freizeit. Kostenlos. Immer. Wenn du willst dass sie weiterlebt:",
+    "donationCopy": "Diese App entsteht in meiner Freizeit. Kostenlos. Immer. Wenn du willst dass sie weiterlebt:",
     "donationCta": "Arved einen Kaffee kaufen",
     "donationUrl": "https://ko-fi.com"
   },
