@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 544" width="264" height="544">
+  <!-- Phone outer frame -->
+  <rect x="0" y="0" width="264" height="544" rx="44" ry="44" fill="#1A1A1A" />
+  <!-- Phone inner bezel -->
+  <rect x="6" y="6" width="252" height="532" rx="40" ry="40" fill="#0D0D0D" />
+  <!-- Screen area -->
+  <rect x="10" y="10" width="244" height="524" rx="36" ry="36" fill="#0D0D0D" />
+
+  <!-- Dynamic Island -->
+  <rect x="97" y="20" width="70" height="22" rx="11" ry="11" fill="#1A1A1A" />
+
+  <!-- Status bar -->
+  <text x="28" y="35" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">9:41</text>
+  <!-- Live indicator -->
+  <circle cx="210" cy="30" r="5" fill="#FF3B30" />
+  <text x="220" y="34" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FF3B30" font-weight="600">LIVE</text>
+
+  <!-- Header -->
+  <rect x="10" y="50" width="244" height="56" fill="#0D0D0D" />
+  <!-- Back chevron -->
+  <text x="28" y="78" font-family="-apple-system, sans-serif" font-size="16" fill="#4DFFED">‹</text>
+  <text x="132" y="72" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">UPPER PUSH A</text>
+  <text x="132" y="88" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#888888" text-anchor="middle">Set 2 of 4 · Exercise 2/6</text>
+
+  <!-- Timer -->
+  <rect x="20" y="114" width="224" height="36" rx="10" fill="#161616" stroke="#262626" stroke-width="1" />
+  <text x="132" y="137" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#4DFFED" text-anchor="middle">00:34:12 elapsed</text>
+
+  <!-- Exercise list header -->
+  <text x="32" y="168" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#888888" letter-spacing="1">EXERCISES</text>
+
+  <!-- Exercise 1: Bench Press (completed) -->
+  <rect x="20" y="178" width="224" height="58" rx="12" fill="#161616" stroke="#262626" stroke-width="1" />
+  <!-- Green check circle -->
+  <circle cx="42" cy="207" r="12" fill="#1A3A2A" />
+  <text x="42" y="212" font-family="-apple-system, sans-serif" font-size="12" fill="#34D399" text-anchor="middle" font-weight="700">✓</text>
+  <text x="62" y="200" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Bench Press</text>
+  <text x="62" y="216" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#888888">4 × 8 reps · 92.5 kg</text>
+  <text x="226" y="200" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#34D399" text-anchor="end" font-weight="600">Done</text>
+  <!-- PR badge -->
+  <rect x="174" y="208" width="34" height="16" rx="8" fill="#2A1A00" />
+  <text x="191" y="220" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FBBF24" text-anchor="middle" font-weight="600">PR 🏆</text>
+
+  <!-- Exercise 2: OHP (active / highlighted) -->
+  <rect x="20" y="244" width="224" height="70" rx="12" fill="#1E3A3A" stroke="#4DFFED" stroke-width="1.5" />
+  <!-- Active indicator dot -->
+  <circle cx="42" cy="274" r="12" fill="#2A5A5A" />
+  <text x="42" y="278" font-family="-apple-system, sans-serif" font-size="10" fill="#4DFFED" text-anchor="middle" font-weight="700">▶</text>
+  <text x="62" y="265" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">OHP</text>
+  <text x="62" y="281" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#888888">4 × 8 reps · 60 kg</text>
+  <!-- Set progress pills -->
+  <rect x="62" y="290" width="16" height="8" rx="4" fill="#4DFFED" />
+  <rect x="82" y="290" width="16" height="8" rx="4" fill="#4DFFED" />
+  <rect x="102" y="290" width="16" height="8" rx="4" fill="#262626" />
+  <rect x="122" y="290" width="16" height="8" rx="4" fill="#262626" />
+  <text x="146" y="298" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#4DFFED">2/4 sets</text>
+  <text x="226" y="265" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#4DFFED" text-anchor="end" font-weight="600">Active</text>
+
+  <!-- Exercise 3: Incline DB (faded / upcoming) -->
+  <rect x="20" y="322" width="224" height="58" rx="12" fill="#111111" stroke="#1A1A1A" stroke-width="1" opacity="0.7" />
+  <circle cx="42" cy="351" r="12" fill="#1A1A1A" />
+  <text x="42" y="356" font-family="-apple-system, sans-serif" font-size="12" fill="#444444" text-anchor="middle">○</text>
+  <text x="62" y="344" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#555555">Incline DB Press</text>
+  <text x="62" y="360" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#444444">3 × 10 reps · 32 kg</text>
+  <text x="226" y="344" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#444444" text-anchor="end">Next</text>
+
+  <!-- Upcoming count -->
+  <text x="132" y="400" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#555555" text-anchor="middle">+ 3 more exercises</text>
+
+  <!-- Weight suggestion chip -->
+  <rect x="60" y="412" width="144" height="24" rx="12" fill="#1A2A1A" stroke="#34D399" stroke-width="1" />
+  <text x="132" y="428" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#34D399" text-anchor="middle">AI suggests: 62.5 kg (+2.5)</text>
+
+  <!-- Add Set button (cyan, large) -->
+  <rect x="20" y="448" width="224" height="44" rx="12" fill="#4DFFED" />
+  <text x="132" y="474" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#080808" text-anchor="middle">+ Log Set</text>
+
+  <!-- Finish workout ghost button -->
+  <rect x="20" y="498" width="224" height="32" rx="10" fill="transparent" stroke="#262626" stroke-width="1" />
+  <text x="132" y="519" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888" text-anchor="middle">Finish Workout</text>
+
+  <!-- Home indicator bar -->
+  <rect x="102" y="537" width="60" height="4" rx="2" fill="#333333" />
+</svg>

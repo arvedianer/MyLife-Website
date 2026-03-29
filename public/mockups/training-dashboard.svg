@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 544" width="264" height="544">
+  <!-- Phone outer frame -->
+  <rect x="0" y="0" width="264" height="544" rx="44" ry="44" fill="#1A1A1A" />
+  <!-- Phone inner bezel -->
+  <rect x="6" y="6" width="252" height="532" rx="40" ry="40" fill="#0D0D0D" />
+  <!-- Screen area -->
+  <rect x="10" y="10" width="244" height="524" rx="36" ry="36" fill="#0D0D0D" />
+
+  <!-- Dynamic Island -->
+  <rect x="97" y="20" width="70" height="22" rx="11" ry="11" fill="#1A1A1A" />
+
+  <!-- Status bar time -->
+  <text x="28" y="35" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">9:41</text>
+
+  <!-- Top nav area -->
+  <rect x="10" y="50" width="244" height="48" rx="0" fill="#0D0D0D" />
+
+  <!-- App logo / name -->
+  <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#4DFFED" letter-spacing="2">MYLIFE</text>
+
+  <!-- Notification bell icon (simplified) -->
+  <rect x="210" y="64" width="18" height="18" rx="3" fill="#262626" />
+  <text x="214" y="77" font-family="-apple-system, sans-serif" font-size="11" fill="#888888">🔔</text>
+
+  <!-- Divider line -->
+  <line x1="10" y1="100" x2="254" y2="100" stroke="#262626" stroke-width="1" />
+
+  <!-- Greeting text -->
+  <text x="32" y="122" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888">Good morning,</text>
+  <text x="32" y="138" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Arved</text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1: Streak -->
+  <rect x="20" y="152" width="104" height="72" rx="12" fill="#161616" stroke="#262626" stroke-width="1" />
+  <text x="32" y="172" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888" letter-spacing="1">STREAK</text>
+  <text x="32" y="196" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#4DFFED">7</text>
+  <text x="60" y="196" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888">Days</text>
+  <text x="32" y="214" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#34D399">🔥 On fire</text>
+
+  <!-- Card 2: This Week -->
+  <rect x="136" y="152" width="108" height="72" rx="12" fill="#161616" stroke="#262626" stroke-width="1" />
+  <text x="148" y="172" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888" letter-spacing="1">THIS WEEK</text>
+  <text x="148" y="196" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">4</text>
+  <text x="172" y="196" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888">workouts</text>
+  <text x="148" y="214" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888">Goal: 5</text>
+
+  <!-- Last Workout Card -->
+  <rect x="20" y="238" width="224" height="80" rx="12" fill="#161616" stroke="#262626" stroke-width="1" />
+  <text x="32" y="258" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888" letter-spacing="1">LAST WORKOUT</text>
+  <text x="32" y="278" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Upper Push A</text>
+  <text x="32" y="296" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888">Mon · 52 min · 6 exercises</text>
+  <!-- Small badge -->
+  <rect x="180" y="265" width="52" height="20" rx="10" fill="#1E3A3A" />
+  <text x="190" y="279" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#4DFFED" font-weight="600">2 PRs 🏆</text>
+
+  <!-- Weekly Progress label -->
+  <text x="32" y="340" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Weekly Progress</text>
+  <text x="192" y="340" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#888888">4/5</text>
+
+  <!-- Progress bar background -->
+  <rect x="20" y="350" width="224" height="8" rx="4" fill="#262626" />
+  <!-- Progress bar fill (70%) -->
+  <rect x="20" y="350" width="157" height="8" rx="4" fill="#4DFFED" />
+
+  <!-- Quick Start button -->
+  <rect x="20" y="374" width="224" height="44" rx="12" fill="#4DFFED" />
+  <text x="132" y="401" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#080808" text-anchor="middle">Start Next Workout</text>
+
+  <!-- Recent Activity label -->
+  <text x="32" y="438" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Recent Activity</text>
+
+  <!-- Activity item -->
+  <rect x="20" y="448" width="224" height="36" rx="8" fill="#161616" />
+  <circle cx="42" cy="466" r="10" fill="#1E3A3A" />
+  <text x="42" y="470" font-family="-apple-system, sans-serif" font-size="10" fill="#4DFFED" text-anchor="middle">↑</text>
+  <text x="60" y="462" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">Bench Press</text>
+  <text x="60" y="476" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888">New PR · 100kg</text>
+  <text x="218" y="469" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#888888" text-anchor="end">Mon</text>
+
+  <!-- Bottom navigation bar -->
+  <rect x="10" y="492" width="244" height="42" rx="0" fill="#111111" />
+  <line x1="10" y1="492" x2="254" y2="492" stroke="#262626" stroke-width="1" />
+
+  <!-- Nav items: Home (active), Workouts, Stats, Profile -->
+  <!-- Home (active) -->
+  <rect x="35" y="500" width="28" height="28" rx="6" fill="#1E3A3A" />
+  <text x="49" y="518" font-family="-apple-system, sans-serif" font-size="14" fill="#4DFFED" text-anchor="middle">⌂</text>
+
+  <!-- Workouts -->
+  <text x="97" y="518" font-family="-apple-system, sans-serif" font-size="14" fill="#555555" text-anchor="middle">▦</text>
+
+  <!-- Stats -->
+  <text x="167" y="518" font-family="-apple-system, sans-serif" font-size="14" fill="#555555" text-anchor="middle">◈</text>
+
+  <!-- Profile -->
+  <text x="225" y="518" font-family="-apple-system, sans-serif" font-size="14" fill="#555555" text-anchor="middle">◉</text>
+
+  <!-- Home indicator bar -->
+  <rect x="102" y="537" width="60" height="4" rx="2" fill="#333333" />
+</svg>

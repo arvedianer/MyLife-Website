@@ -1,11 +1,10 @@
-import Navbar from "@/components/Navbar";
+import { FloatingNavbar } from "@/components/FloatingNavbar";
 import HeroSection from "@/components/HeroSection";
-import EcosystemOverview from "@/components/EcosystemOverview";
+import EcosystemSection from "@/components/EcosystemSection";
 import TrainingSection from "@/components/TrainingSection";
 import NutritionSection from "@/components/NutritionSection";
-import ImprovementSection from "@/components/ImprovementSection";
-import ComparisonTable from "@/components/ComparisonTable";
-import VisionRoadmap from "@/components/VisionRoadmap";
+import LifeSection from "@/components/LifeSection";
+import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -14,19 +13,18 @@ export default async function Home({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  await params;
 
   return (
     <>
-      <Navbar locale={locale} />
+      <FloatingNavbar />
       <main>
         <HeroSection />
-        <EcosystemOverview />
+        <EcosystemSection />
         <TrainingSection />
         <NutritionSection />
-        <ImprovementSection />
-        <ComparisonTable />
-        <VisionRoadmap />
+        <LifeSection />
+        <StatsSection />
         <CTASection />
       </main>
       <Footer />

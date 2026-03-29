@@ -1,0 +1,137 @@
+{
+  "hero": {
+    "badge": "Training is live",
+    "headline": "MY LIFE",
+    "sub": "Training. Nutrition. Life.",
+    "subline": "By a lifter, for lifters. Free.",
+    "cta": "Open Training App",
+    "ctaSecondary": "Learn more",
+    "ctaUrl": "https://mylifetraining.vercel.app"
+  },
+  "nav": {
+    "training": "Training",
+    "nutrition": "Nutrition",
+    "life": "Life",
+    "cta": "Open Training",
+    "lang": "DE"
+  },
+  "ecosystem": {
+    "label": "The Ecosystem",
+    "headline": "Three Apps. One Vision.",
+    "subline": "Train, eat, live — all connected.",
+    "training": {
+      "name": "MyLife Training",
+      "tagline": "Track strength. Get stronger.",
+      "f1": "AI weight suggestions",
+      "f2": "Athlete Score 0–1000",
+      "f3": "Coach Arved – personal AI coach",
+      "badge": "live"
+    },
+    "nutrition": {
+      "name": "MyLife Nutrition",
+      "tagline": "Macros that match your training.",
+      "f1": "Barcode scanner",
+      "f2": "AI nutrition plan",
+      "f3": "Sync with Training",
+      "badge": "soon"
+    },
+    "life": {
+      "name": "MyLife Life",
+      "tagline": "Habits that stick.",
+      "f1": "Daily routines",
+      "f2": "Streak tracking",
+      "f3": "Sync with Training & Nutrition",
+      "badge": "planned"
+    }
+  },
+  "training": {
+    "sectionLabel": "MyLife Training",
+    "headline": "The smartest training app you'll never have to pay for.",
+    "subline": "AI weight suggestions, personal coach, Athlete Score — free.",
+    "features": [
+      {
+        "title": "Active Workout",
+        "subtitle": "AI weight suggestions, PR detection",
+        "description": "Progressive overload on autopilot. The app suggests the ideal weight based on your training history."
+      },
+      {
+        "title": "Athlete Score",
+        "subtitle": "0–1000. Five dimensions.",
+        "description": "Strength, endurance, consistency, volume, progress. One honest number representing your entire fitness level."
+      },
+      {
+        "title": "Coach Arved",
+        "subtitle": "Not a chatbot. Arved.",
+        "description": "He knows your PRs, your weak muscles, your missed sessions. Responds like a human."
+      },
+      {
+        "title": "Splits & Plans",
+        "subtitle": "Arnold, PPL, Bro Split — or your own",
+        "description": "Pre-built splits or fully custom programming. All exercises, all muscle groups."
+      },
+      {
+        "title": "Community & Forum",
+        "subtitle": "See who's training live",
+        "description": "See in real time who's in the gym. Cheffe role for the strongest. DMs, forum, stronger together."
+      },
+      {
+        "title": "Stats & Analytics",
+        "subtitle": "Lifetime tracking of your strength",
+        "description": "Volume, weight, reps — tracked across your entire training career."
+      }
+    ],
+    "comparison": {
+      "headline": "Why not just use another app?",
+      "subline": "We compared.",
+      "feature0": "Free",
+      "feature1": "AI Coach",
+      "feature2": "Progressive Overload AI",
+      "feature3": "Athlete Score",
+      "feature4": "Community / Forum",
+      "feature5": "PWA — no App Store",
+      "feature6": "Dark Mode always",
+      "feature7": "German language"
+    }
+  },
+  "nutrition": {
+    "label": "Coming Soon",
+    "headline": "Stop guessing what to eat.",
+    "subline": "AI-powered nutrition tracking. Macros that match your training.",
+    "f0": "Macro tracking with barcode scanner",
+    "f1": "AI nutrition plan based on your training goals",
+    "f2": "Sync with MyLife Training (calories ↔ workout volume)",
+    "f3": "Weekly AI adjustments"
+  },
+  "life": {
+    "label": "Planned",
+    "headline": "Habits that actually stick.",
+    "subline": "Not the 10th habit tracker. The only one connected to your training.",
+    "f0": "Daily routines with reminders",
+    "f1": "Streak tracking with statistics",
+    "f2": "Goal system with milestones",
+    "f3": "Sync with Training & Nutrition"
+  },
+  "stats": {
+    "v0": "60+",
+    "l0": "Exercises in the library",
+    "v1": "100%",
+    "l1": "Free. Always.",
+    "v2": "PWA",
+    "l2": "No App Store needed"
+  },
+  "cta": {
+    "headline": "Ready?",
+    "subline": "Start your first workout in 2 minutes.",
+    "primary": "Open Training App",
+    "ctaUrl": "https://mylifetraining.vercel.app",
+    "donationCopy": "This app is built in free time. Free. Always. If you want it to keep going:",
+    "donationCta": "Buy Arved a coffee",
+    "donationUrl": "https://ko-fi.com"
+  },
+  "footer": {
+    "madeBy": "Made by Arved",
+    "github": "GitHub",
+    "githubUrl": "https://github.com/arvedianer",
+    "lang": "DE"
+  }
+}
