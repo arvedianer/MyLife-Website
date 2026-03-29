@@ -5,28 +5,54 @@ import { Lock } from "lucide-react";
 import FadeUp from "./FadeUp";
 import IPhoneFrame from "./IPhoneFrame";
 
-export default function NutritionSection() {
-  const t = useTranslations("nutrition");
+export default function LifeSection() {
+  const t = useTranslations("life");
   const features = [0, 1, 2, 3].map((i) => t(`f${i}`));
 
   return (
-    <section id="nutrition" className="py-28 px-6 relative overflow-hidden">
+    <section id="life" className="py-28 px-6 relative overflow-hidden">
       <div className="divider absolute top-0 inset-x-0" />
 
-      {/* Emerald ambient glow */}
+      {/* Amber ambient glow */}
       <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(52,211,153,0.12) 0%, transparent 70%)" }}
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(ellipse, rgba(251,191,36,0.10) 0%, transparent 70%)" }}
       />
 
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-          {/* Left: Content */}
-          <div>
+          {/* Left: Blurred mockup (image first on desktop) */}
+          <FadeUp delay={0.2} className="flex justify-center order-2 lg:order-1">
+            <div className="relative">
+              {/* Blurred phone */}
+              <div className="opacity-50 blur-sm pointer-events-none select-none">
+                <IPhoneFrame
+                  src="/mockups/training-dashboard.svg"
+                  alt="MyLife Life preview"
+                  accentColor="var(--amber)"
+                />
+              </div>
+
+              {/* In Planung overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="glass rounded-2xl px-8 py-5 text-center">
+                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">
+                    {t("label")}
+                  </p>
+                  <p className="font-manrope text-xs" style={{ color: "var(--amber)" }}>
+                    MyLife Life
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
+
+          {/* Right: Content */}
+          <div className="order-1 lg:order-2">
             <FadeUp>
               <p
                 className="font-manrope text-xs font-semibold uppercase tracking-widest mb-4"
-                style={{ color: "var(--emerald)" }}
+                style={{ color: "var(--amber)" }}
               >
                 {t("label")}
               </p>
@@ -47,7 +73,7 @@ export default function NutritionSection() {
                   <div className="flex items-start gap-3">
                     <Lock
                       className="w-4 h-4 mt-0.5 flex-shrink-0"
-                      style={{ color: "var(--emerald)", opacity: 0.45 }}
+                      style={{ color: "var(--amber)", opacity: 0.45 }}
                       aria-hidden="true"
                     />
                     <span className="font-manrope text-sm" style={{ color: "var(--text-muted)" }}>
@@ -59,35 +85,9 @@ export default function NutritionSection() {
             </div>
 
             <FadeUp delay={0.38}>
-              <span className="badge-soon">{t("label")}</span>
+              <span className="badge-planned">{t("label")}</span>
             </FadeUp>
           </div>
-
-          {/* Right: Blurred mockup + overlay */}
-          <FadeUp delay={0.2} className="flex justify-center">
-            <div className="relative">
-              {/* Blurred phone */}
-              <div className="opacity-50 blur-sm pointer-events-none select-none">
-                <IPhoneFrame
-                  src="/mockups/training-dashboard.svg"
-                  alt="MyLife Nutrition preview"
-                  accentColor="var(--emerald)"
-                />
-              </div>
-
-              {/* Coming Soon overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="glass rounded-2xl px-8 py-5 text-center">
-                  <p className="font-barlow font-black text-white text-2xl tracking-tight mb-1">
-                    Coming Soon
-                  </p>
-                  <p className="font-manrope text-xs" style={{ color: "var(--emerald)" }}>
-                    MyLife Nutrition
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeUp>
         </div>
       </div>
     </section>
